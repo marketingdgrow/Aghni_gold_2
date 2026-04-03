@@ -1,16 +1,17 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gold Buyers in Chennai – Sell Gold at Best Price Today | Aghni Gold</title>
-<meta name="description" content="Aghni Gold – Chennai's trusted gold buyers. Get today's live gold rate, instant cash within 15 minutes, doorstep service, and zero hidden charges. BIS-certified testing.">
+<title>Gold Buyers in Chennai - Sell Gold at Best Price Today | Aghni Gold</title>
+<meta name="description" content="Aghni Gold - Chennai's trusted gold buyers. Get today's live gold rate, instant cash within 15 minutes, doorstep service, and zero hidden charges. BIS-certified testing.">
 <meta name="keywords" content="gold buyers in Chennai, sell gold Chennai, today gold rate Chennai, 22 carat gold rate today Chennai, best gold buyers near me">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./style.css"> 
-<!-- <style >
- /* ═══════════════════════════════════════
+<!-- <style>
+/* ═══════════════════════════════════════
    ROOT THEME — FROM FIRST CODE
 ═══════════════════════════════════════ */
 :root {
@@ -71,6 +72,7 @@ h1,h2,h3,h4 { font-family: 'Playfair Display', serif; }
   padding: 0 32px;
   letter-spacing: 0.03em;
 }
+.ticker-track span i { margin-right: 6px; }
 .ticker-track span::after { content: '•'; margin-left: 32px; opacity: 0.4; }
 
 /* ═══════════════════════════════════════
@@ -90,12 +92,16 @@ nav {
   height: 64px;
 }
 .nav-logo {
-  
   width: 170px;
-  height: 120px;
+  height: 64px;
+  display: flex;
+  align-items: center;
 }
 .nav-logo img {
-    width: 100%;
+  width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: left center;
 }
 .nav-links {
   display: flex;
@@ -125,6 +131,7 @@ nav {
   text-decoration: none;
   transition: background 0.2s, transform 0.15s;
 }
+.nav-cta i { margin-right: 6px; }
 .nav-cta:hover { background: var(--gold-light); transform: translateY(-1px); }
 
 
@@ -135,6 +142,7 @@ nav {
   color: var(--gold);
   cursor: pointer;
 }
+.menu-toggle i { pointer-events: none; }
 
 /* MENU WRAPPER */
 .nav-menu {
@@ -147,7 +155,8 @@ nav {
 @media (max-width: 1024px) {
 
   nav {
-    position: relative;
+    position: sticky;
+    top: 0;
   }
 
   .menu-toggle {
@@ -159,28 +168,33 @@ nav {
     top: 64px;
     left: 0;
     width: 100%;
-
     background: var(--bg2);
-    border-bottom: 1px solid var(--border);
-
+    border-bottom: 0;
     flex-direction: column;
     align-items: flex-start;
-
-    padding: 20px;
-
+    padding: 0 20px;
     max-height: 0;
     overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
     transition: all 0.3s ease;
   }
 
   .nav-menu.open {
     max-height: 500px;
+    padding: 20px;
+    border-bottom: 1px solid var(--border);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
   }
 
   .nav-links {
     flex-direction: column;
     width: 100%;
     gap: 16px;
+    margin-right: 0;
   }
 
   .nav-links a {
@@ -283,6 +297,7 @@ nav {
   font-size: 15px; font-weight: 600; cursor: pointer; text-decoration: none;
   display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s;
 }
+.btn-secondary i { margin-right: 2px; }
 .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
 .hero-trust { display: flex; gap: 2rem; align-items: center; }
 .trust-item { text-align: center; }
@@ -345,6 +360,7 @@ nav {
 .rate-table td.change-up { color: var(--green); font-weight: 600; }
 .rate-table td.change-dn { color: var(--red); font-weight: 600; }
 .rate-note { font-size: 0.78rem; color: var(--text2); margin-top: 1rem; opacity: 0.7; }
+.rate-note i { margin-right: 6px; color: var(--gold); }
 
 /* ═══════════════════════════════════════
    CALCULATOR — FROM FIRST CODE
@@ -468,6 +484,7 @@ nav {
 .sell-list { list-style: none; display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem; }
 .sell-list li { display: flex; gap: 1rem; align-items: flex-start; }
 .sell-icon { width: 44px; height: 44px; background: rgba(247,182,61,0.1); border: 1px solid var(--border); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; }
+.sell-icon i { line-height: 1; }
 .sell-item-text strong { display: block; color: var(--text); font-weight: 600; margin-bottom: 0.2rem; }
 .sell-item-text span { color: var(--text2); font-size: 0.88rem; }
 .lead-form-wrap { background: var(--bg2); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; box-shadow: var(--shadow-lg); }
@@ -514,6 +531,7 @@ nav {
 .why-card.visible { opacity: 1; transform: translateY(0); }
 .why-card:hover { background: rgba(247,182,61,0.07); border-color: var(--border); transform: translateY(-4px) !important; }
 .why-icon { font-size: 2rem; margin-bottom: 1rem; }
+.why-icon i { line-height: 1; }
 .why-card h4 { color: var(--gold); font-size: 1.1rem; margin-bottom: 0.6rem; }
 .why-card p { color: var(--text2); font-size: 0.88rem; line-height: 1.65; }
 
@@ -626,6 +644,7 @@ nav {
 .nobill-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
 .doc-list { list-style: none; display: flex; flex-direction: column; gap: 0.8rem; margin: 1.5rem 0; }
 .doc-list li { display: flex; gap: 0.8rem; align-items: center; background: rgba(247,182,61,0.05); border: 1px solid var(--border); border-radius: 8px; padding: 0.8rem 1rem; font-size: 0.9rem; color: var(--text2); }
+.doc-list li i { color: var(--gold); width: 16px; text-align: center; }
 .legal-note { background: rgba(247,182,61,0.06); border: 1px solid var(--border); border-radius: 10px; padding: 1.2rem; font-size: 0.85rem; color: var(--text2); line-height: 1.7; }
 
 /* ═══════════════════════════════════════
@@ -635,6 +654,7 @@ nav {
 .purity-test-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
 .test-card { border: 1px solid var(--border); border-radius: 14px; padding: 1.8rem; background: var(--bg3); }
 .test-icon { font-size: 2.2rem; margin-bottom: 1rem; }
+.test-icon i { line-height: 1; }
 .test-card h4 { color: var(--gold); font-size: 1.05rem; margin-bottom: 0.5rem; }
 .test-card p { color: var(--text2); font-size: 0.86rem; line-height: 1.65; }
 
@@ -652,6 +672,8 @@ nav {
 }
 .review-card.visible { opacity: 1; transform: translateY(0); }
 .review-stars { color: var(--gold); font-size: 0.9rem; margin-bottom: 0.8rem; }
+.review-stars i { margin-right: 2px; }
+.review-stars i:last-child { margin-right: 0; }
 .review-text { color: var(--text2); font-size: 0.88rem; line-height: 1.7; margin-bottom: 1rem; font-style: italic; }
 .review-meta { display: flex; align-items: center; gap: 0.8rem; }
 .review-avatar { width: 38px; height: 38px; border-radius: 50%; background: rgba(247,182,61,0.1); border: 2px solid var(--border); display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--gold); font-size: 0.9rem; }
@@ -660,6 +682,8 @@ nav {
 .rating-bar { display: flex; align-items: center; justify-content: center; gap: 1.5rem; margin-bottom: 2.5rem; }
 .big-rating { font-family: 'Playfair Display', serif; font-size: 4rem; font-weight: 900; color: var(--gold); line-height: 1; }
 .rating-stars { color: var(--gold); font-size: 1.4rem; }
+.rating-stars i { margin-right: 2px; }
+.rating-stars i:last-child { margin-right: 0; }
 .rating-count { color: var(--text2); font-size: 0.85rem; }
 
 /* ═══════════════════════════════════════
@@ -696,18 +720,29 @@ nav {
 .cta-section > p { color: var(--text2); font-size: 1rem; max-width: 500px; margin: 0 auto 2.5rem; position: relative; }
 .cta-btns { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; position: relative; }
 .phone-btn { background: transparent; border: 1.5px solid var(--border); color: var(--gold); padding: 0.9rem 2rem; border-radius: 6px; font-weight: 700; font-size: 1rem; text-decoration: none; transition: all 0.2s; }
+.phone-btn i { margin-right: 8px; }
 .phone-btn:hover { border-color: var(--gold); background: rgba(247,182,61,0.08); }
 .branch-pills { display: flex; justify-content: center; gap: 1rem; margin-top: 2rem; flex-wrap: wrap; }
 .branch-pill { background: rgba(247,182,61,0.08); border: 1px solid var(--border); color: var(--text2); padding: 0.5rem 1.2rem; border-radius: 30px; font-size: 0.82rem; }
+.branch-pill i { color: var(--gold); margin-right: 6px; }
 .branch-pill strong { color: var(--gold); }
 footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3rem 8vw 2rem; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; }
-.foot-brand { font-family: 'Playfair Display', serif; font-size: 1.6rem; color: var(--gold); font-weight: 900; margin-bottom: 0.6rem; }
-.foot-tagline { color: var(--text2); font-size: 0.82rem; line-height: 1.6; max-width: 220px; }
+.foot-brand 
+{  width: 200px;
+  height: 130px;
+   }
+   .foot-brand img {
+    width: 100%;
+    height: 100%;
+   }
+.foot-tagline { color: var(--text2); font-size: 1rem; line-height: 1.6; max-width: 220px; }
 .foot-h { 
-    color: var(--gold); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem;
+    color: var(--gold); font-size: 1.4rem; 
+    font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem;
  }
-.foot-links { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
-.foot-links a { color: var(--text2); text-decoration: none; font-size: 0.84rem; transition: color 0.2s; }
+.foot-links { list-style: none; display: flex; flex-direction: column; gap: 0.7rem;
+ }
+.foot-links a { color: var(--text2); text-decoration: none; font-size: 1rem; transition: color 0.2s; }
 .foot-links a:hover { color: var(--gold); }
 .foot-bottom { grid-column: 1/-1; border-top: 1px solid var(--border); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
 .foot-copy { color: var(--text2); font-size: 0.78rem; }
@@ -791,6 +826,7 @@ footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3
   font-size: 13px;
   font-weight: 500;
 }
+.call-popup p i { margin-right: 6px; }
 
 /* SHOW */
 .call-popup.show {
@@ -908,10 +944,10 @@ footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3
     min-height: auto;
   }
   .hero-left {
-    padding: 4rem 6vw 2rem;
+    padding: 2.4rem 6vw 1.4rem;
   }
   .hero-right {
-    padding: 0 6vw 4rem;
+    padding: 0 6vw 3rem;
     justify-content: center;
   }
   .hero-rate-card {
@@ -1053,12 +1089,12 @@ footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3
   }
   .nav-logo {
     width: 130px;
-    height: 90px;
+    height: 56px;
   }
 
   /* HERO */
   .hero-left {
-    padding: 3rem 5vw 1.5rem;
+    padding: 1.5rem 5vw 1rem;
   }
   .hero h1 {
     font-size: clamp(2rem, 7vw, 3rem);
@@ -1084,7 +1120,7 @@ footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3
     gap: 1rem;
   }
   .hero-right {
-    padding: 0 5vw 2.5rem;
+    padding: 0 5vw 2rem;
   }
   .hero-rate-card {
     padding: 1.6rem;
@@ -1491,86 +1527,794 @@ footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3
     font-size: 11px;
   }
 }
- </style>  -->
+
+/* ==========================================
+   TOP EXPERIENCE REVAMP
+========================================== */
+.top-flash-bar {
+  position: sticky;
+  top: 0;
+  z-index: 230;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 12px;
+  background: #d3a635;
+  border-bottom: 1px solid rgba(247,182,61,0.2);
+  color: #000000;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+#topFlashText {
+  transition: opacity 0.28s ease, transform 0.28s ease;
+}
+#topFlashText.fade {
+  opacity: 0;
+  transform: translateY(-6px);
+}
+
+.main-nav {
+  position: sticky;
+  top: 36px;
+  z-index: 220;
+  height: 72px;
+  padding: 0 2.8vw;
+  /* background: #fdb03d; */
+  border-bottom: 1px solid rgba(247,182,61,0.22);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.main-nav .nav-left {
+  display: flex;
+  align-items: center;
+  gap: 0.95rem;
+  min-width: 0;
+}
+.main-nav .nav-logo {
+  width: 120px;
+  height: 80px;
+  /* border-radius: 12px;
+  background: rgba(247,182,61,0.12);
+  border: 1px solid rgba(247,182,61,0.28);
+  padding: 6px; */
+}
+.main-nav .nav-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.nav-brand-copy {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+.nav-brand-copy strong {
+  color: #f5f0e8;
+  font-size: 1.18rem;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+}
+.nav-brand-copy span {
+  color: #f7c84e;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.nav-rate-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.58rem 0.95rem;
+  border-radius: 12px;
+  border: 1px solid rgba(247,182,61,0.4);
+  background: rgba(247,182,61,0.08);
+  color: #ffd973;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+.nav-rate-pill .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #25d366;
+  box-shadow: 0 0 0 4px rgba(37,211,102,0.2);
+}
+.nav-rate-pill strong {
+  color: #ffd233;
+  font-size: 1.42rem;
+  font-family: 'Playfair Display', serif;
+  line-height: 1;
+}
+.nav-rate-pill small {
+  opacity: 0.9;
+}
+
+.main-nav .menu-toggle {
+  display: none;
+}
+.main-nav .nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+}
+.main-nav .nav-links {
+  margin-right: 0;
+  gap: 0.9rem;
+}
+.main-nav .nav-links a {
+  color: #c6cfdd;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0;
+  padding: 0.52rem 0.78rem;
+  border-radius: 9px;
+}
+.main-nav .nav-links a:hover {
+  color: #f5f0e8;
+  background: rgba(247,182,61,0.08);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.58rem;
+}
+.nav-action-btn {
+  border: 1px solid rgba(247,182,61,0.35);
+  background: rgba(247,182,61,0.08);
+  color: #ffcf49;
+  text-decoration: none;
+  padding: 0.58rem 0.95rem;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+.nav-action-btn:hover {
+  background: rgba(247,182,61,0.18);
+  transform: translateY(-1px);
+}
+.nav-call-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  border: 1px solid rgba(247,182,61,0.4);
+  color: #ffcf49;
+  background: rgba(247,182,61,0.12);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.08rem;
+}
+.nav-call-btn:hover {
+  transform: translateY(-1px);
+  background: rgba(247,182,61,0.22);
+}
+
+.main-nav + .ticker-wrap {
+  background: #010203;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(247,182,61,0.24);
+}
+.main-nav + .ticker-wrap .ticker-track span {
+  color: #ffcf49;
+  font-size: 1rem;
+}
+.main-nav + .ticker-wrap .ticker-track span:nth-child(2),
+.main-nav + .ticker-wrap .ticker-track span:nth-child(9) {
+  color: #f5f0e8;
+  font-weight: 700;
+}
+
+#hero.hero {
+  min-height: auto;
+  /* background:
+    radial-gradient(circle at 80% 18%, rgba(247,182,61,0.14) 0%, rgba(247,182,61,0) 42%),
+    linear-gradient(100deg, #061227 0%, #071a35 45%, #082246 100%); */
+  display: block;
+  overflow: hidden;
+}
+#hero .hero-left {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 2rem 5vw 1.25rem;
+  text-align: center;
+}
+#hero .hero-kicker {
+  background: transparent;
+  border: none;
+  color: #f7c84e;
+  letter-spacing: 0.22em;
+  font-size: 1.02rem;
+  margin-bottom: 1.4rem;
+  padding: 0;
+}
+#hero .hero-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.65rem;
+  margin-bottom: 1.8rem;
+}
+#hero .hero-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  border-radius: 999px;
+  padding: 0.52rem 0.95rem;
+  font-size: 0.98rem;
+  font-weight: 700;
+  border: 1px solid rgba(247,182,61,0.24);
+  background: rgba(247,182,61,0.08);
+}
+#hero .chip-live {
+  color: #25d366;
+  border-color: rgba(37,211,102,0.4);
+  background: rgba(37,211,102,0.12);
+}
+#hero .chip-rating {
+  color: #ffd447;
+}
+#hero .chip-years {
+  color: #8ec9ff;
+  border-color: rgba(72,145,255,0.45);
+  background: rgba(72,145,255,0.14);
+}
+#hero .chip-quote {
+  color: #7ef2a7;
+  border-color: rgba(37,211,102,0.42);
+  background: rgba(37,211,102,0.12);
+}
+#hero .chip-rating small {
+  color: rgba(245,240,232,0.55);
+}
+#hero h1 {
+  margin: 0 auto 1.45rem;
+  font-size: clamp(3rem, 5.6vw, 5rem);
+  line-height: 1.06;
+  max-width: 1100px;
+  color: #f4f6fb;
+}
+#hero h1 em {
+  color: #ffd11f;
+}
+#hero .hero-offer-pill {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(37,211,102,0.44);
+  background: rgba(11,64,48,0.62);
+  padding: 0.72rem 1.3rem;
+  margin-bottom: 1.35rem;
+}
+#hero .hero-offer-pill strong {
+  color: #6af4a7;
+  font-size: 1.22rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+#hero .hero-offer-pill p {
+  color: #ffd447;
+  font-weight: 700;
+  font-size: 1rem;
+  margin: 0;
+}
+#hero .hero-sub {
+  margin: 0 auto 1.85rem;
+  max-width: 860px;
+  text-align: center;
+  font-size: clamp(1.15rem, 2vw, 1.2rem);
+  color: rgba(245,240,232,0.82);
+  line-height: 1.45;
+}
+#hero .hero-btns {
+  justify-content: center;
+  margin-bottom: 0;
+}
+#hero .hero-right {
+  padding: 0 5vw 3rem;
+}
+#hero .hero-rate-card {
+  margin: 0 auto;
+  width: min(920px, 100%);
+  border-radius: 22px;
+  background: transparent;
+  border: 2px solid rgba(247,182,61,0.68);
+  box-shadow: 0 18px 55px rgba(0,0,0,0.45);
+}
+#hero .rate-card-title {
+  justify-content: center;
+  font-size: 0.95rem;
+}
+#hero .rate-disclaimer {
+  text-align: center;
+}
+
+.support-popup {
+  position: fixed;
+  top: 122px;
+  right: 26px;
+  z-index: 280;
+  width: min(360px, calc(100vw - 30px));
+  background: #f3f4f7;
+  color: #0d1a2f;
+  border-radius: 16px;
+  border: 1px solid rgba(247,182,61,0.48);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.28);
+  padding: 14px 14px 14px 12px;
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  opacity: 0;
+  transform: translateY(-16px);
+  pointer-events: none;
+  transition: opacity 0.32s ease, transform 0.32s ease;
+}
+.support-popup.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.support-close {
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  color: #8f96a6;
+  cursor: pointer;
+}
+.support-avatar {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.support-avatar-fallback {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #570202, #8a0000);
+  color: #ffd447;
+  font-size: 1rem;
+}
+.support-avatar .status-dot {
+  position: absolute;
+  right: -1px;
+  bottom: 2px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #23c15f;
+  border: 2px solid #f3f4f7;
+}
+.support-body {
+  padding-right: 20px;
+}
+.support-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+.support-head strong {
+  font-size: 1.07rem;
+}
+.support-tag {
+  background: rgba(247,182,61,0.2);
+  color: #c07b00;
+  border-radius: 7px;
+  padding: 2px 7px;
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+.support-body p {
+  margin: 0 0 6px;
+  font-size: 0.97rem;
+  line-height: 1.35;
+  color: #29364f;
+}
+.support-body small {
+  color: #19924a;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.support-body .online-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #2ad368;
+}
+
+.sale-popup {
+  position: fixed;
+  left: 22px;
+  bottom: 22px;
+  z-index: 280;
+  width: min(400px, calc(100vw - 28px));
+  background: #f1f3f7;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.7);
+  box-shadow: 0 18px 44px rgba(0,0,0,0.28);
+  padding: 14px 15px 14px 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  opacity: 0;
+  transform: translateY(14px);
+  pointer-events: none;
+  transition: opacity 0.32s ease, transform 0.32s ease;
+}
+.sale-popup.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.sale-close {
+  position: absolute;
+  top: 9px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: #9ca4b4;
+  cursor: pointer;
+}
+.sale-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(37,211,102,0.18);
+  color: #11a94e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.13rem;
+  flex-shrink: 0;
+}
+.sale-content p {
+  margin: 0 0 4px;
+  color: #2a3449;
+  line-height: 1.34;
+  font-size: 1.05rem;
+}
+.sale-content p strong {
+  color: #101826;
+}
+#saleSaved {
+  color: #05a84f;
+  font-weight: 800;
+}
+.sale-content small {
+  color: #6e7688;
+  font-size: 0.86rem;
+}
+.sale-content #liveRateValue {
+  color: #c98b09;
+  font-weight: 700;
+}
+
+.chat-float-btn {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #ffbf1f;
+  color: #101826;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  box-shadow: 0 12px 35px rgba(255,191,31,0.4);
+  z-index: 281;
+}
+.chat-live-dot {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #2ad368;
+  border: 2px solid #f4f6fb;
+}
+
+@media (max-width: 1200px) {
+  .main-nav .nav-brand-copy {
+    display: none;
+  }
+  .nav-rate-pill strong {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .top-flash-bar {
+    height: 32px;
+    font-size: 0.82rem;
+  }
+  .main-nav {
+    top: 32px;
+    height: 64px;
+  }
+  .main-nav .menu-toggle {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-nav .nav-rate-pill {
+    margin-left: 0.35rem;
+    padding: 0.45rem 0.65rem;
+    font-size: 0.78rem;
+  }
+  .main-nav .nav-rate-pill strong {
+    font-size: 1rem;
+  }
+  .main-nav .nav-menu {
+    position: absolute;
+    left: 0;
+    top: 64px;
+    width: 100%;
+    background: #081a35;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.8rem;
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.28s ease;
+  }
+  .main-nav .nav-menu.open {
+    max-height: 560px;
+    padding: 16px 18px 18px;
+    border-bottom: 1px solid rgba(247,182,61,0.22);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .main-nav .nav-links {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+  .main-nav .nav-links a {
+    width: 100%;
+    font-size: 0.98rem;
+    background: rgba(255,255,255,0.03);
+  }
+  .main-nav .nav-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.55rem;
+  }
+  .nav-action-btn {
+    width: 100%;
+    text-align: center;
+  }
+  .nav-call-btn {
+    width: 44px;
+    align-self: flex-end;
+  }
+  #hero .hero-left {
+    padding-top: 2.5rem;
+  }
+  #hero h1 {
+    font-size: clamp(2.2rem, 8vw, 4rem);
+  }
+  #hero .hero-sub {
+    font-size: 1.08rem;
+  }
+  #hero .hero-offer-pill strong {
+    font-size: 1rem;
+  }
+  #hero .hero-offer-pill p {
+    font-size: 0.9rem;
+  }
+  .support-popup {
+    top: 106px;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-flash-bar {
+    font-size: 0.74rem;
+    gap: 6px;
+    text-align: center;
+  }
+  .main-nav + .ticker-wrap .ticker-track span {
+    font-size: 0.86rem;
+  }
+  .main-nav .nav-rate-pill {
+    display: none;
+  }
+  #hero .hero-left {
+    padding: 1.8rem 5vw 1rem;
+  }
+  #hero .hero-chip-row {
+    gap: 0.45rem;
+  }
+  #hero .hero-chip {
+    font-size: 0.82rem;
+    padding: 0.38rem 0.64rem;
+  }
+  #hero .hero-sub {
+    font-size: 0.95rem;
+  }
+  #hero .hero-rate-card {
+    border-radius: 16px;
+  }
+  .support-popup {
+    top: 96px;
+    right: 12px;
+    width: calc(100vw - 24px);
+  }
+  .sale-popup {
+    left: 12px;
+    width: calc(100vw - 24px);
+    bottom: 12px;
+  }
+  .chat-float-btn {
+    right: 14px;
+    bottom: 14px;
+    width: 54px;
+    height: 54px;
+  }
+}
+
+</style> -->
 </head>
 <body>
 
-<!-- ═══════════════════════════════════════
-     TICKER — FROM FIRST CODE
-═══════════════════════════════════════ -->
-<div class="ticker-wrap">
-  <div class="ticker-track" id="ticker">
-    <span>24K Gold: ₹9,420/g</span>
-    <span>22K Gold: ₹8,629/g</span>
-    <span>18K Gold: ₹7,065/g</span>
-    <span>Aghni Gold Offer: Extra ₹300/gram</span>
-    <span>⭐ 4.9 Rating • 435+ Reviews</span>
-    <span>📍 Doorstep Service Across Chennai</span>
-    <span>🔬 BIS Certified XRF Testing</span>
-    <span>24K Gold: ₹9,420/g</span>
-    <span>22K Gold: ₹8,629/g</span>
-    <span>18K Gold: ₹7,065/g</span>
-    <span>Aghni Gold Offer: Extra ₹300/gram</span>
-    <span>⭐ 4.9 Rating • 435+ Reviews</span>
-    <span>📍 Doorstep Service Across Chennai</span>
-    <span>🔬 BIS Certified XRF Testing</span>
-  </div>
+
+<div class="top-flash-bar">
+  <i class="fa-solid fa-trophy" aria-hidden="true"></i>
+  <span id="topFlashText">Sell Gold at Chennai's Highest Price - Instant Payment</span>
+  <i class="fa-solid fa-angle-right" aria-hidden="true"></i>
 </div>
 
-<!-- ═══════════════════════════════════════
-     NAVBAR — FIRST CODE STYLE + AGHNI CONTENT
-═══════════════════════════════════════ -->
-<nav>
-  <a href="#" class="nav-logo">
-    <img src="./img/logo (4).png" alt="">
-  </a>
+<!-- NAVBAR - REFERENCE STYLE -->
 
-  <!-- HAMBURGER -->
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<nav class="main-nav">
+  <div class="nav-left">
+    <a href="#" class="nav-logo">
+      <img src="./img/logo (4).png" alt="Aghni Gold">
+    </a>
+    <!-- <div class="nav-brand-copy">
+      <strong>Aghni Gold</strong>
+      <span>Chennai's Trusted Gold Buyer</span>
+    </div> -->
+    <div class="nav-rate-pill">
+      <span class="dot"></span>
+      <span>Rate</span>
+      <strong id="navLiveRate">INR 13,818</strong>
+      <small>/g</small>
+    </div>
+  </div>
 
-  <!-- MENU -->
+  <div class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+    <i class="fa-solid fa-bars" aria-hidden="true"></i>
+  </div>
+
   <div class="nav-menu" id="navMenu">
     <ul class="nav-links">
-      <li><a href="#gold-rate">Today Rate</a></li>
-      <li><a href="#calculator">Calculator</a></li>
-      <li><a href="#sell">Sell Gold</a></li>
-      <li><a href="#faqs">FAQ</a></li>
-      <li><a href="#branches">Branches</a></li>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#gold-rate">Gold Rate</a></li>
+      <li><a href="#history">Old Gold Rate</a></li>
+      <li><a href="#areas">Service Areas</a></li>
+      <li><a href="#insights">Knowledge</a></li>
     </ul>
-
-    <a href="tel:+918000100933" class="nav-cta">📞 Call Now</a>
+    <div class="nav-actions">
+      <a href="#gold-rate" class="nav-action-btn">Gold Rate</a>
+      <a href="#history" class="nav-action-btn">Old Gold Rate</a>
+      <a href="tel:+918000100933" class="nav-call-btn" aria-label="Call Aghni Gold">
+        <i class="fa-solid fa-phone" aria-hidden="true"></i>
+      </a>
+    </div>
   </div>
 </nav>
 
-<div class="call-popup" id="callPopup">
-  <p>📞 Call now to get the best gold price instantly!</p>
-  <button onclick="closePopup()">Close ✕</button>
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-track" id="ticker">
+    <span>24K Gold: INR 9,420/g</span>
+    <span>22K Gold: INR 8,629/g</span>
+    <span>18K Gold: INR 7,065/g</span>
+    <!-- <span>Aghni Gold Offer: Extra INR 300/gram</span> -->
+    <span><i class="fa-solid fa-star" aria-hidden="true"></i> 4.9 Rating. 435+ Reviews</span>
+    <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Doorstep Service Across Chennai</span>
+    <span><i class="fa-solid fa-microscope" aria-hidden="true"></i> BIS Certified XRF Testing</span>
+    <span>24K Gold: INR 9,420/g</span>
+    <span>22K Gold: INR 8,629/g</span>
+    <span>18K Gold: INR 7,065/g</span>
+    <!-- <span>Aghni Gold Offer: Extra INR 300/gram</span> -->
+    <span><i class="fa-solid fa-star" aria-hidden="true"></i> 4.9 Rating.  435+ Reviews</span>
+    <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Doorstep Service Across Chennai</span>
+    <span><i class="fa-solid fa-microscope" aria-hidden="true"></i> BIS Certified XRF Testing</span>
+  </div>
 </div>
 
-<!-- ═══════════════════════════════════════
-     HERO — SECOND CODE CONTENT
-═══════════════════════════════════════ -->
-<section class="hero">
+<div class="support-popup" id="callPopup">
+  <button class="support-close" onclick="closePopup()" aria-label="Close support popup">
+    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+  </button>
+  <div class="support-avatar">
+    <span class="support-avatar-fallback"><i class="fa-solid fa-user"></i></span>
+    <span class="status-dot"></span>
+  </div>
+  <div class="support-body">
+    <div class="support-head">
+      <strong id="supportName">Ramesh</strong>
+      <span class="support-tag">Aghni Support</span>
+    </div>
+    <p id="supportText">Hi! Need help with gold rates or selling? I'm here to help.</p>
+    <small><span class="online-dot"></span> Online now - Replies instantly</small>
+  </div>
+</div>
+
+
+<section class="hero" id="hero">
   <div class="hero-left">
-    <div class="hero-badge"><span class="live-dot"></span> Live Gold Rates Updated Hourly</div>
-    <h1>Gold Buyers in Chennai –<br><em>Sell Gold at the Best Price</em> Today</h1>
-    <p class="hero-sub">Walk in or call us. We buy old, broken, pledged, or unused gold at the highest Chennai market rate — with full transparency, zero hidden charges, and instant payment.</p>
-    <div class="hero-offer">
-      <strong>Gold Offer : Extra ₹300/gram</strong>
-      <p>Even if your gold is locked in a bank or finance company — we visit, clear the pledge, and pay ₹300 more per gram on top of today's market rate.</p>
+    <div class="hero-top-row">
+      <div class="hero-image-wrap">
+        <img src="./img/p1.png" alt="Gold buyer with jewellery" loading="eager" decoding="async">
+      </div>
+      <div class="hero-top-copy">
+        <div class="hero-badge hero-kicker">AGHNI GOLD</div>
+        <div class="hero-chip-row">
+          <span class="hero-chip chip-live"><span class="live-dot"></span> LIVE</span>
+          <span class="hero-chip chip-rating"><i class="fa-solid fa-star" aria-hidden="true"></i> 4.9 <small>(435+)</small></span>
+          <span class="hero-chip chip-years"><i class="fa-solid fa-award" aria-hidden="true"></i> 15+ Yrs</span>
+          <!-- <span class="hero-chip chip-quote"><i class="fa-solid fa-users" aria-hidden="true"></i> <strong id="heroQuoteCount">49 people got quotes yesterday</strong></span> -->
+        </div>
+        <h1>Gold Buyers in Chennai<br><em>Sell Gold at the Best Price Today</em></h1>
+         <p class="hero-sub">Walk in or call us. We buy old, pledged, or unused gold at the highest Chennai market rate — with full transparency, zero hidden charges, and instant payment.
+</p>
+        
+      </div>
+      
     </div>
+    <div class="hero-offer hero-offer-pill">
+      <strong><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> WE PAY THE HIGHEST IN CHENNAI</strong>
+      <p>INR 15K Guarantee if you find a better rate.</p>
+    </div>
+    <!-- <p class="hero-sub">Walk in or call us. We buy old, pledged, or unused gold at the highest Chennai market rate — with full transparency, zero hidden charges, and instant payment.
+</p> -->
     <div class="hero-btns">
-      <a href="#calculator" class="btn-primary">Check Your Gold Value →</a>
-      <a href="tel:+918000100933" class="btn-secondary">📞 8000 100 933</a>
-    </div>
-    <div class="hero-trust">
-      <!-- <div class="trust-item"><div class="trust-num">4.9★</div><div class="trust-label">Google Rating</div></div>
-      <div class="trust-div"></div>
-      <div class="trust-item"><div class="trust-num">435+</div><div class="trust-label">Reviews</div></div>
-      <div class="trust-div"></div>
-      <div class="trust-item"><div class="trust-num">15 Min</div><div class="trust-label">Instant Cash</div></div>
-      <div class="trust-div"></div>
-      <div class="trust-item"><div class="trust-num">BIS</div><div class="trust-label">Certified</div></div> -->
+      <a href="#calculator" class="btn-primary">Check Your Gold Value</a>
+      <a href="tel:+918000100933" class="btn-secondary"><i class="fa-solid fa-phone" aria-hidden="true"></i> 8000 100 933</a>
     </div>
   </div>
   <div class="hero-right">
@@ -1579,32 +2323,30 @@ footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3
       <div class="rate-rows">
         <div class="rate-row">
           <div class="rate-label">24 Karat (999)<small>Per Gram</small></div>
-          <div class="rate-value" id="hero-24k">—<small>/g</small></div>
+          <div class="rate-value" id="hero-24k">--<small>/g</small></div>
         </div>
         <div class="rate-row">
           <div class="rate-label">22 Karat (916)<small>Per Gram</small></div>
-          <div class="rate-value" id="hero-22k">—<small>/g</small></div>
+          <div class="rate-value" id="hero-22k">--<small>/g</small></div>
         </div>
         <div class="rate-row">
           <div class="rate-label">18 Karat (750)<small>Per Gram</small></div>
-          <div class="rate-value" id="hero-18k">—<small>/g</small></div>
+          <div class="rate-value" id="hero-18k">--<small>/g</small></div>
         </div>
       </div>
-      <div class="rate-update" id="hero-update-time">Fetching live rate…</div>
+      <div class="rate-update" id="hero-update-time">Fetching live rate...</div>
       <button class="rate-cta-btn" onclick="document.getElementById('calculator').scrollIntoView({behavior:'smooth'})">Calculate My Gold Value</button>
       <div class="rate-disclaimer">Rates shown are for reference. Final price confirmed after purity test.</div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     SECTION 2 — TODAY GOLD RATE TABLE
-═══════════════════════════════════════ -->
+
 <section class="section section-warm" id="gold-rate">
   <div class="section-header reveal">
     <span class="section-label">Live Rates</span>
     <h2 class="section-h2">Today Gold Rate in Chennai</h2>
-    <p class="section-sub">The gold rate in Chennai today moves with global demand, the dollar rate, and RBI policy. This table gives you the current rate for all karat values — updated every hour so you know exactly what your gold is worth before you even pick up the phone.</p>
+    <p class="section-sub">The gold rate in Chennai today moves with global demand, the dollar rate, and RBI policy. This table gives you the current rate for all karat values  -  updated every hour so you know exactly what your gold is worth before you even pick up the phone.</p>
   </div>
   <div class="rate-table-wrap reveal">
     <table class="rate-table">
@@ -1614,16 +2356,14 @@ footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3
         </tr>
       </thead>
       <tbody id="rate-table-body">
-        <tr><td colspan="6" style="text-align:center;color:var(--text2);padding:2rem;">Loading live gold rate in Chennai today…</td></tr>
+        <tr><td colspan="6" style="text-align:center;color:var(--text2);padding:2rem;">Loading live gold rate in Chennai today...</td></tr>
       </tbody>
     </table>
-    <p class="rate-note">⚠️ Rates shown are indicative Chennai market prices. Actual payout depends on purity verified at time of testing. Last updated: <span id="rate-last-updated">—</span></p>
+    <p class="rate-note"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i> Rates shown are indicative Chennai market prices. Actual payout depends on purity verified at time of testing. Last updated: <span id="rate-last-updated"> - </span></p>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     CALCULATOR — FROM FIRST CODE
-═══════════════════════════════════════ -->
+
 <section class="section calc-section" id="calculator">
   <div class="section-header reveal center">
     <span class="section-label">Gold Value Calculator</span>
@@ -1662,55 +2402,53 @@ footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3
     </div>
     <div class="calc-result">
       <div class="result-label">Your Gold Value</div>
-      <div class="result-amount" id="calc-result-display">₹0</div>
+      <div class="result-amount" id="calc-result-display">INR 0</div>
       <div class="result-breakdown">
         <div><span>Weight</span><span id="rb-weight">10g</span></div>
         <div><span>Purity</span><span id="rb-purity">22K</span></div>
-        <div><span>Rate</span><span id="rb-rate">₹8,629/g</span></div>
+        <div><span>Rate</span><span id="rb-rate">INR 8,629/g</span></div>
       </div>
-      <a href="tel:+918000100933" class="btn-primary" style="width:100%;justify-content:center;">Get Exact Quote →</a>
+      <a href="tel:+918000100933" class="btn-primary" style="width:100%;justify-content:center;">Get Exact Quote -></a>
       <div class="disclaimer">* Estimate only. Exact price after XRF purity testing.</div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     SECTION 4 — GOLD RATE HISTORY
-═══════════════════════════════════════ -->
+
 <section class="section section-warm" id="history">
   <div class="section-header reveal">
     <span class="section-label">Price History</span>
-    <h2 class="section-h2">Gold Rate History – Last 10 Days in Chennai</h2>
+    <h2 class="section-h2">Gold Rate History - Last 10 Days in Chennai</h2>
     <p class="section-sub">Tracking the gold rate history in Chennai helps you spot the right moment to sell. Here is how the 22 carat gold rate has moved over the past ten days.</p>
   </div>
   <div class="history-grid reveal" id="history-grid"></div>
   <div class="mini-chart reveal" id="mini-chart"></div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     SECTION 5 — GOLD PRICE PREDICTION
-═══════════════════════════════════════ -->
+<!-- =======================================
+     SECTION 5  -  GOLD PRICE PREDICTION
+======================================= -->
 <section class="section prediction-section" id="prediction">
   <div class="section-header reveal center">
     <span class="section-label">Market Outlook</span>
-    <h2 class="section-h2">Gold Price Prediction – What the Market Signals Say</h2>
+    <h2 class="section-h2">Gold Price Prediction - What the Market Signals Say</h2>
     <p class="section-sub">No tool predicts gold prices with certainty. But here is what current market signals suggest for the gold rate forecast in Chennai and India.</p>
   </div>
   <div class="prediction-grid">
     <div class="prediction-card">
-      <div class="pred-period">Short Term (1–2 Weeks)</div>
+      <div class="pred-period">Short Term (1-2 Weeks)</div>
       <span class="pred-signal signal-up">Mildly Positive</span>
-      <p class="pred-text">Global uncertainty and a slightly weaker rupee are both keeping gold demand firm. If these factors hold, short-term prices could edge up 0.5–1.5% from today's Chennai gold rate.</p>
+      <p class="pred-text">Global uncertainty and a slightly weaker rupee are both keeping gold demand firm. If these factors hold, short-term prices could edge up 0.5-1.5% from today's Chennai gold rate.</p>
       <p class="pred-disclaimer">This is market analysis, not financial advice.</p>
     </div>
     <div class="prediction-card">
-      <div class="pred-period">Medium Term (1–3 Months)</div>
+      <div class="pred-period">Medium Term (1-3 Months)</div>
       <span class="pred-signal signal-neutral">Watch Carefully</span>
-      <p class="pred-text">The US Federal Reserve's rate direction and India's import duty situation are the two biggest unknowns. Gold price trends in Chennai could swing either way — making right now a fair window to sell if liquidity matters to you.</p>
+      <p class="pred-text">The US Federal Reserve's rate direction and India's import duty situation are the two biggest unknowns. Gold price trends in Chennai could swing either way  -  making right now a fair window to sell if liquidity matters to you.</p>
       <p class="pred-disclaimer">This is market analysis, not financial advice.</p>
     </div>
     <div class="prediction-card">
-      <div class="pred-period">Long Term (6–12 Months)</div>
+      <div class="pred-period">Long Term (6-12 Months)</div>
       <span class="pred-signal signal-up">Broadly Positive</span>
       <p class="pred-text">Historically, gold in India has appreciated over long periods. That said, selling today at a strong rate and putting the cash to work often makes more financial sense than holding an idle asset indefinitely.</p>
       <p class="pred-disclaimer">This is market analysis, not financial advice.</p>
@@ -1718,41 +2456,41 @@ footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     SECTION 6 — SELL GOLD
-═══════════════════════════════════════ -->
+<!-- =======================================
+     SECTION 6  -  SELL GOLD
+======================================= -->
 <section class="section sell-section" id="sell">
   <div class="sell-grid">
     <div class="reveal">
       <span class="section-label">Sell Gold in Chennai</span>
-      <h2 class="section-h2">Where to Sell Gold in Chennai — and Why the Buyer Matters</h2>
+      <h2 class="section-h2">Where to Sell Gold in Chennai  -  and Why the Buyer Matters</h2>
       <p class="section-sub">Not every place that says "we buy gold" pays you the real market rate. The gap between a good buyer and an ordinary one can be hundreds of rupees per gram.</p>
       <ul class="sell-list">
         <li>
-          <div class="sell-icon">🏠</div>
+          <div class="sell-icon"><i class="fa-solid fa-house" aria-hidden="true"></i></div>
           <div class="sell-item-text">
-            <strong>Doorstep Gold Buying (7 AM – 9 PM)</strong>
-            <span>Our team visits you — at home or your office — to test and buy your gold on the spot. No travel, no queue, no risk.</span>
+            <strong>Doorstep Gold Buying (7 AM - 9 PM)</strong>
+            <span>Our team visits you  -  at home or your office  -  to test and buy your gold on the spot. No travel, no queue, no risk.</span>
           </div>
         </li>
         <li>
-          <div class="sell-icon">💰</div>
+          <div class="sell-icon"><i class="fa-solid fa-money-bill-wave" aria-hidden="true"></i></div>
           <div class="sell-item-text">
             <strong>Instant Cash for Old Gold Jewellery</strong>
-            <span>Bangles, chains, rings, broken pieces — we buy all of it. Outdated design, missing stones, scratched surface — none of that reduces the base gold value.</span>
+            <span>Bangles, chains, rings, broken pieces  -  we buy all of it. Outdated design, missing stones, scratched surface  -  none of that reduces the base gold value.</span>
           </div>
         </li>
         <li>
-          <div class="sell-icon">🏦</div>
+          <div class="sell-icon"><i class="fa-solid fa-building-columns" aria-hidden="true"></i></div>
           <div class="sell-item-text">
             <strong>Pledged Gold Takeover Service</strong>
-            <span>Gold locked in a bank or NBFC? We clear the loan balance directly and hand you the remaining amount — often more than you expect.</span>
+            <span>Gold locked in a bank or NBFC? We clear the loan balance directly and hand you the remaining amount  -  often more than you expect.</span>
           </div>
         </li>
         <li>
-          <div class="sell-icon">🔍</div>
+          <div class="sell-icon"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></div>
           <div class="sell-item-text">
-            <strong>Open Purity Testing — You Watch Everything</strong>
+            <strong>Open Purity Testing  -  You Watch Everything</strong>
             <span>The XRF machine shows purity percentage on screen. The weight goes on a calibrated scale. Every number is visible. Nothing happens out of your sight.</span>
           </div>
         </li>
@@ -1761,7 +2499,7 @@ footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3
     <div class="reveal">
       <div class="lead-form-wrap">
         <h3>Get Your Gold's Estimated Value</h3>
-        <p>Enter weight and karat — see today's estimated payout before you even pick up the phone.</p>
+        <p>Enter weight and karat  -  see today's estimated payout before you even pick up the phone.</p>
         <div class="lf-group">
           <label>Gold Weight (grams)</label>
           <input type="number" id="lf-weight" placeholder="e.g. 12" min="0.1" step="0.1">
@@ -1769,8 +2507,8 @@ footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3
         <div class="lf-group">
           <label>Gold Karat</label>
           <select id="lf-karat">
-            <option value="24">24 Karat (999 – Pure)</option>
-            <option value="22" selected>22 Karat (916 – Standard)</option>
+            <option value="24">24 Karat (999 - Pure)</option>
+            <option value="22" selected>22 Karat (916 - Standard)</option>
             <option value="18">18 Karat (750)</option>
             <option value="14">14 Karat (585)</option>
           </select>
@@ -1784,10 +2522,10 @@ footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3
           <input type="tel" id="lf-phone" placeholder="+91 XXXXX XXXXX">
         </div>
         <button class="lf-submit" onclick="leadFormEstimate()">Show My Estimated Value</button>
-        <p class="lf-privacy">We never share your details. One call only — to confirm your estimate.</p>
+        <p class="lf-privacy">We never share your details. One call only  -  to confirm your estimate.</p>
         <div class="lf-result-box" id="lf-result-box">
           <div class="result-total-label">Estimated Value for Your Gold</div>
-          <div class="est-val" id="lf-est-val">—</div>
+          <div class="est-val" id="lf-est-val"> - </div>
           <p id="lf-est-note">Based on today's Chennai gold rate. Actual payout confirmed after free purity test.</p>
         </div>
       </div>
@@ -1795,20 +2533,20 @@ footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     SECTION 7 — PROCESS
-═══════════════════════════════════════ -->
+<!-- =======================================
+     SECTION 7  -  PROCESS
+======================================= -->
 <section class="section process-section" id="process">
   <div class="section-header reveal center">
     <span class="section-label">How It Works</span>
-    <h2 class="section-h2">The Gold Selling Process — Four Steps to Cash</h2>
+    <h2 class="section-h2">The Gold Selling Process  -  Four Steps to Cash</h2>
     <p class="section-sub" style="margin:0 auto">Four steps. Fifteen minutes. That is the entire gold selling process from arrival to payment.</p>
   </div>
   <div class="steps-grid reveal">
     <div class="step">
       <div class="step-num">1</div>
       <h4>Bring or Call</h4>
-      <p>Walk into any branch or call us to schedule a doorstep visit. No appointment needed — open Monday to Saturday, 9:30 AM to 7 PM.</p>
+      <p>Walk into any branch or call us to schedule a doorstep visit. No appointment needed  -  open Monday to Saturday, 9:30 AM to 7 PM.</p>
     </div>
     <div class="step">
       <div class="step-num">2</div>
@@ -1818,72 +2556,72 @@ footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3
     <div class="step">
       <div class="step-num">3</div>
       <h4>Price Confirmation</h4>
-      <p>We show the math: weight × purity × today's gold rate. You approve the final number. No surprise deductions after the fact.</p>
+      <p>We show the math: weight x purity x today's gold rate. You approve the final number. No surprise deductions after the fact.</p>
     </div>
     <div class="step">
       <div class="step-num">4</div>
       <h4>Instant Payment</h4>
-      <p>Cash, bank transfer, or UPI — your choice. Payment completed within 15 minutes of walking through the door.</p>
+      <p>Cash, bank transfer, or UPI  -  your choice. Payment completed within 15 minutes of walking through the door.</p>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     SECTION 8 — WHY CHOOSE AGHNI GOLD
-═══════════════════════════════════════ -->
+<!-- =======================================
+     SECTION 8  -  WHY CHOOSE AGHNI GOLD
+======================================= -->
 <section class="section why-section" id="why">
   <div class="section-header reveal center">
     <span class="section-label">Why Aghni Gold</span>
     <h2 class="section-h2">Why Chennai's Trusted Gold Buyers Pay More</h2>
-    <p class="section-sub" style="margin:0 auto">Being reliable gold buyers is not a claim — it is what happens when you actually walk in.</p>
+    <p class="section-sub" style="margin:0 auto">Being reliable gold buyers is not a claim  -  it is what happens when you actually walk in.</p>
   </div>
   <div class="why-grid">
-    <div class="why-card"><div class="why-icon">🏛️</div><h4>Government-Registered & RBI Compliant</h4><p>We operate under full RBI and government compliance. Your transaction is legal, documented, and protected — with no grey areas.</p></div>
-    <div class="why-card"><div class="why-icon">📊</div><h4>Real Market Rate — Not a Discounted Price</h4><p>Many buyers offer 85–92% of the market rate. We pay the highest gold price in Chennai by keeping our margins fair and our pricing transparent.</p></div>
-    <div class="why-card"><div class="why-icon">🔬</div><h4>BIS-Certified Purity Testing</h4><p>We use calibrated XRF spectrometers — the same technology jewellery assaying labs rely on. Accurate to the decimal point, every time.</p></div>
-    <div class="why-card"><div class="why-icon">🚗</div><h4>Doorstep Service Across Chennai</h4><p>From Velachery to Ambattur, our team comes to you. Sell gold from your home without stepping out or taking half a day off work.</p></div>
-    <div class="why-card"><div class="why-icon">💳</div><h4>Cash, UPI, or Bank Transfer</h4><p>Choose how you receive your money. Instant cash for amounts within legal limits. Same-day bank transfer for larger transactions — fully documented.</p></div>
-    <div class="why-card"><div class="why-icon">🔄</div><h4>Pledged Gold Rescue</h4><p>Gold stuck in a gold loan? We close the lender account directly and hand you the difference — often on the same day you call us.</p></div>
+    <div class="why-card"><div class="why-icon"><i class="fa-solid fa-landmark" aria-hidden="true"></i></div><h4>Government-Registered & RBI Compliant</h4><p>We operate under full RBI and government compliance. Your transaction is legal, documented, and protected  -  with no grey areas.</p></div>
+    <div class="why-card"><div class="why-icon"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></div><h4>Real Market Rate  -  Not a Discounted Price</h4><p>Many buyers offer 85-92% of the market rate. We pay the highest gold price in Chennai by keeping our margins fair and our pricing transparent.</p></div>
+    <div class="why-card"><div class="why-icon"><i class="fa-solid fa-microscope" aria-hidden="true"></i></div><h4>BIS-Certified Purity Testing</h4><p>We use calibrated XRF spectrometers  -  the same technology jewellery assaying labs rely on. Accurate to the decimal point, every time.</p></div>
+    <div class="why-card"><div class="why-icon"><i class="fa-solid fa-truck" aria-hidden="true"></i></div><h4>Doorstep Service Across Chennai</h4><p>From Velachery to Ambattur, our team comes to you. Sell gold from your home without stepping out or taking half a day off work.</p></div>
+    <div class="why-card"><div class="why-icon"><i class="fa-solid fa-credit-card" aria-hidden="true"></i></div><h4>Cash, UPI, or Bank Transfer</h4><p>Choose how you receive your money. Instant cash for amounts within legal limits. Same-day bank transfer for larger transactions  -  fully documented.</p></div>
+    <div class="why-card"><div class="why-icon"><i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i></div><h4>Pledged Gold Rescue</h4><p>Gold stuck in a gold loan? We close the lender account directly and hand you the difference  -  often on the same day you call us.</p></div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     SECTION 9 — GOLD VALUE BREAKDOWN
-═══════════════════════════════════════ -->
+<!-- =======================================
+     SECTION 9  -  GOLD VALUE BREAKDOWN
+======================================= -->
 <section class="section breakdown-section" id="breakdown">
   <div class="section-header reveal">
     <span class="section-label">Price Calculation</span>
-    <h2 class="section-h2">How Gold Price Is Calculated — The Real Formula</h2>
+    <h2 class="section-h2">How Gold Price Is Calculated  -  The Real Formula</h2>
   </div>
   <div class="breakdown-grid">
     <div class="reveal">
       <div class="formula-box">
-        <h4>Gold Value Calculation Formula — A Worked Example</h4>
-        <div class="formula-line"><span class="op">①</span> Gross Weight of Jewellery = 12.5 grams</div>
-        <div class="formula-line"><span class="op">②</span> Stone Weight Deducted = 0.5 grams</div>
-        <div class="formula-line"><span class="op">③</span> Net Gold Weight = 12.0 grams</div>
-        <div class="formula-line"><span class="op">④</span> Karat = 22K → Purity Factor = 0.916</div>
-        <div class="formula-line"><span class="op">⑤</span> Pure Gold Equivalent = 12.0 × 0.916 = 10.99g</div>
-        <div class="formula-line"><span class="op">⑥</span> Today's 24K Rate = ₹9,420/g</div>
-        <div class="formula-result">Final Payout ≈ 10.99g × ₹9,420 = <span style="color:var(--gold)">₹1,03,526</span></div>
+        <h4>Gold Value Calculation Formula  -  A Worked Example</h4>
+        <div class="formula-line"><span class="op">1.</span> Gross Weight of Jewellery = 12.5 grams</div>
+        <div class="formula-line"><span class="op">2.</span> Stone Weight Deducted = 0.5 grams</div>
+        <div class="formula-line"><span class="op">3.</span> Net Gold Weight = 12.0 grams</div>
+        <div class="formula-line"><span class="op">4.</span> Karat = 22K -> Purity Factor = 0.916</div>
+        <div class="formula-line"><span class="op">5.</span> Pure Gold Equivalent = 12.0 x 0.916 = 10.99g</div>
+        <div class="formula-line"><span class="op">6.</span> Today's 24K Rate = INR 9,420/g</div>
+        <div class="formula-result">Final Payout approx 10.99g x INR 9,420 = <span style="color:var(--gold)">INR 1,03,526</span></div>
       </div>
     </div>
     <div class="breakdown-text reveal">
       <h4>What This Means When You Sell</h4>
       <p>When you take your gold to any buyer, three things determine the price: net gold weight (after removing stones), the karat purity, and the current market rate per gram.</p>
-      <p>Where buyers differ is in what extra deductions they apply. Some take a "making charge recovery" or "wastage" percentage that quietly eats 5–10% of your money. At Aghni Gold, we show you exactly which deductions apply and the reason behind each — so the final number is never a surprise.</p>
+      <p>Where buyers differ is in what extra deductions they apply. Some take a "making charge recovery" or "wastage" percentage that quietly eats 5-10% of your money. At Aghni Gold, we show you exactly which deductions apply and the reason behind each  -  so the final number is never a surprise.</p>
       <p>For 22 carat hallmarked gold with no stones, the gold deduction calculation is nearly always straightforward. The example above gives you a close estimate of what to expect before you arrive.</p>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     SECTION 10 — GOLD PURITY GUIDE
-═══════════════════════════════════════ -->
+<!-- =======================================
+     SECTION 10  -  GOLD PURITY GUIDE
+======================================= -->
 <section class="section purity-section" id="purity">
   <div class="section-header reveal center">
     <span class="section-label">Purity Guide</span>
-    <h2 class="section-h2">Gold Purity Chart – 916, 750, 999 Explained Simply</h2>
+    <h2 class="section-h2">Gold Purity Chart - 916, 750, 999 Explained Simply</h2>
     <p class="section-sub" style="margin:0 auto">What is 916 gold? How does 22K differ from 24K? This hallmark gold purity chart breaks it down so you always know what you own and what it is worth.</p>
   </div>
   <div class="purity-table-wrap reveal">
@@ -1893,7 +2631,7 @@ footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3
       </thead>
       <tbody>
         <tr><td>24K</td><td><span class="hallmark-badge">999</span></td><td>99.9%</td><td>100% of 24K rate</td><td>Gold coins, bars, investment gold</td></tr>
-        <tr><td>22K</td><td><span class="hallmark-badge">916</span></td><td>91.6%</td><td>91.6% of 24K rate</td><td>Most Indian jewellery — standard hallmark</td></tr>
+        <tr><td>22K</td><td><span class="hallmark-badge">916</span></td><td>91.6%</td><td>91.6% of 24K rate</td><td>Most Indian jewellery  -  standard hallmark</td></tr>
         <tr><td>20K</td><td><span class="hallmark-badge">833</span></td><td>83.3%</td><td>83.3% of 24K rate</td><td>Some traditional South Indian designs</td></tr>
         <tr><td>18K</td><td><span class="hallmark-badge">750</span></td><td>75.0%</td><td>75% of 24K rate</td><td>Diamond jewellery settings, modern pieces</td></tr>
         <tr><td>14K</td><td><span class="hallmark-badge">585</span></td><td>58.5%</td><td>58.5% of 24K rate</td><td>Imported and western-style jewellery</td></tr>
@@ -1902,26 +2640,26 @@ footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     SECTION 11 — GOLD LOAN VS SELLING
-═══════════════════════════════════════ -->
+<!-- =======================================
+     SECTION 11  -  GOLD LOAN VS SELLING
+======================================= -->
 <section class="section loan-section" id="loan-vs-sell">
   <div class="section-header reveal center">
     <span class="section-label">Decision Guide</span>
-    <h2 class="section-h2">Gold Loan vs Selling Gold — Which Makes More Sense for You?</h2>
-    <p class="section-sub" style="margin:0 auto">This is the most common question we receive. The fair answer depends on your situation — here is how to think it through clearly.</p>
+    <h2 class="section-h2">Gold Loan vs Selling Gold  -  Which Makes More Sense for You?</h2>
+    <p class="section-sub" style="margin:0 auto">This is the most common question we receive. The fair answer depends on your situation  -  here is how to think it through clearly.</p>
   </div>
   <div class="compare-grid reveal">
     <div class="compare-card loan">
       <span class="tag">Gold Loan</span>
       <h4>When a Gold Loan Works</h4>
       <ul class="compare-list">
-        <li class="pro">You need money temporarily and can repay within 6–12 months</li>
+        <li class="pro">You need money temporarily and can repay within 6-12 months</li>
         <li class="pro">The jewellery has deep sentimental or heirloom value</li>
         <li class="pro">You believe gold prices will rise significantly before you repay</li>
-        <li class="con">You pay 12–24% annual interest on most gold loans</li>
+        <li class="con">You pay 12-24% annual interest on most gold loans</li>
         <li class="con">Missing repayments puts your gold at auction risk</li>
-        <li class="con">You only receive 65–75% of gold value as the loan amount</li>
+        <li class="con">You only receive 65-75% of gold value as the loan amount</li>
       </ul>
     </div>
     <div class="compare-card sell">
@@ -1930,20 +2668,20 @@ footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3
       <ul class="compare-list">
         <li class="pro">You need money now with no fixed plan to repay</li>
         <li class="pro">The jewellery is unused, outdated, or damaged</li>
-        <li class="pro">You receive 90–98% of the gold market value — not a fraction</li>
+        <li class="pro">You receive 90-98% of the gold market value  -  not a fraction</li>
         <li class="pro">No interest, no EMI pressure, no risk of losing the asset to auction</li>
         <li class="con">You no longer own the physical gold after the sale</li>
       </ul>
     </div>
     <div class="verdict-box">
-      <strong>The honest take:</strong> If the gold is sitting unused in a locker and earning nothing, selling it and putting that money to work almost always comes out ahead of a gold loan — especially once you account for months of interest. That said, for jewellery with deep family significance, a short-term loan to manage a cash crunch is a completely reasonable choice. We help with both.
+      <strong>The honest take:</strong> If the gold is sitting unused in a locker and earning nothing, selling it and putting that money to work almost always comes out ahead of a gold loan  -  especially once you account for months of interest. That said, for jewellery with deep family significance, a short-term loan to manage a cash crunch is a completely reasonable choice. We help with both.
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     SECTION 12 — COMMON MISTAKES
-═══════════════════════════════════════ -->
+<!-- =======================================
+     SECTION 12  -  COMMON MISTAKES
+======================================= -->
 <section class="section mistakes-section" id="mistakes">
   <div class="section-header reveal center">
     <span class="section-label">Seller's Guide</span>
@@ -1951,22 +2689,22 @@ footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3
     <p class="section-sub" style="margin:0 auto">Sidestep these common errors and you will almost always get the best gold price available.</p>
   </div>
   <div class="mistakes-grid reveal">
-    <div class="mistake-card"><div class="mistake-num">01</div><h4>Selling Without Checking Today's Rate</h4><p>Gold prices shift hourly. Always check the live gold rate in Chennai before stepping out. A ₹200/gram difference on 10 grams is ₹2,000 gained or lost on the spot.</p></div>
-    <div class="mistake-card"><div class="mistake-num">02</div><h4>Not Watching the Purity Test Yourself</h4><p>If a buyer tests your gold "in the back room," leave. Any buyer worth trusting runs the test right in front of you — purity percentage visible on screen as it reads.</p></div>
-    <div class="mistake-card"><div class="mistake-num">03</div><h4>Accepting Unexplained Deductions</h4><p>Ask: what deductions are being made and why? Making charge recovery, wastage fees, and unexplained "labour" cuts of 5–10% are common at unregulated buyers.</p></div>
-    <div class="mistake-card"><div class="mistake-num">04</div><h4>Selling to an Unregistered Buyer</h4><p>Only sell to buyers who are RBI compliant and government registered. Unregistered buyers carry legal risk for you — and almost always offer the lowest prices.</p></div>
-    <div class="mistake-card"><div class="mistake-num">05</div><h4>Rushing to Sell on a Low-Price Day</h4><p>Check the gold rate history for the past 7–10 days. If prices just dipped, waiting 48 hours could recover a meaningful amount. Use the history chart above to decide.</p></div>
-    <div class="mistake-card"><div class="mistake-num">06</div><h4>Not Asking for a Proper Transaction Receipt</h4><p>Always collect a receipt. This protects you legally and serves as proof of legitimate sale — important if the transaction later comes up in an income tax assessment.</p></div>
+    <div class="mistake-card"><div class="mistake-num">01</div><h4>Selling Without Checking Today's Rate</h4><p>Gold prices shift hourly. Always check the live gold rate in Chennai before stepping out. A INR 200/gram difference on 10 grams is INR 2,000 gained or lost on the spot.</p></div>
+    <div class="mistake-card"><div class="mistake-num">02</div><h4>Not Watching the Purity Test Yourself</h4><p>If a buyer tests your gold "in the back room," leave. Any buyer worth trusting runs the test right in front of you  -  purity percentage visible on screen as it reads.</p></div>
+    <div class="mistake-card"><div class="mistake-num">03</div><h4>Accepting Unexplained Deductions</h4><p>Ask: what deductions are being made and why? Making charge recovery, wastage fees, and unexplained "labour" cuts of 5-10% are common at unregulated buyers.</p></div>
+    <div class="mistake-card"><div class="mistake-num">04</div><h4>Selling to an Unregistered Buyer</h4><p>Only sell to buyers who are RBI compliant and government registered. Unregistered buyers carry legal risk for you  -  and almost always offer the lowest prices.</p></div>
+    <div class="mistake-card"><div class="mistake-num">05</div><h4>Rushing to Sell on a Low-Price Day</h4><p>Check the gold rate history for the past 7-10 days. If prices just dipped, waiting 48 hours could recover a meaningful amount. Use the history chart above to decide.</p></div>
+    <div class="mistake-card"><div class="mistake-num">06</div><h4>Not Asking for a Proper Transaction Receipt</h4><p>Always collect a receipt. This protects you legally and serves as proof of legitimate sale  -  important if the transaction later comes up in an income tax assessment.</p></div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     SECTION 13 — GOLD VS INVESTMENTS
-═══════════════════════════════════════ -->
+<!-- =======================================
+     SECTION 13  -  GOLD VS INVESTMENTS
+======================================= -->
 <section class="section invest-section" id="gold-vs">
   <div class="section-header reveal">
     <span class="section-label">Investment Comparison</span>
-    <h2 class="section-h2">Gold vs Fixed Deposit, Real Estate & Stocks — A Plain Comparison</h2>
+    <h2 class="section-h2">Gold vs Fixed Deposit, Real Estate & Stocks  -  A Plain Comparison</h2>
     <p class="section-sub">Is gold a good investment? This side-by-side comparison of gold vs fixed deposit, real estate, and equities puts the numbers in plain view.</p>
   </div>
   <div class="reveal">
@@ -1975,10 +2713,10 @@ footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3
         <tr><th>Asset</th><th>Avg. Annual Return</th><th>Liquidity</th><th>Risk Level</th><th>Inflation Hedge</th><th>Best Suited For</th></tr>
       </thead>
       <tbody>
-        <tr><td>Physical Gold</td><td>8–12% (long term)</td><td><span class="badge-good">High</span></td><td><span class="badge-low">Low</span></td><td><span class="badge-good">Strong</span></td><td>Crisis protection, wealth preservation</td></tr>
-        <tr><td>Fixed Deposit (Bank)</td><td>6.5–7.5%</td><td><span class="badge-mod">Medium</span></td><td><span class="badge-low">Very Low</span></td><td><span class="badge-low">Weak</span></td><td>Stable, predictable returns</td></tr>
-        <tr><td>Real Estate</td><td>5–10% (varies widely)</td><td><span class="badge-low">Very Low</span></td><td><span class="badge-mod">Medium</span></td><td><span class="badge-mod">Moderate</span></td><td>Long-term wealth building</td></tr>
-        <tr><td>Equities / Stocks</td><td>10–15% (market-linked)</td><td><span class="badge-good">High</span></td><td><span class="badge-low">High</span></td><td><span class="badge-mod">Moderate</span></td><td>Growth with higher risk tolerance</td></tr>
+        <tr><td>Physical Gold</td><td>8-12% (long term)</td><td><span class="badge-good">High</span></td><td><span class="badge-low">Low</span></td><td><span class="badge-good">Strong</span></td><td>Crisis protection, wealth preservation</td></tr>
+        <tr><td>Fixed Deposit (Bank)</td><td>6.5-7.5%</td><td><span class="badge-mod">Medium</span></td><td><span class="badge-low">Very Low</span></td><td><span class="badge-low">Weak</span></td><td>Stable, predictable returns</td></tr>
+        <tr><td>Real Estate</td><td>5-10% (varies widely)</td><td><span class="badge-low">Very Low</span></td><td><span class="badge-mod">Medium</span></td><td><span class="badge-mod">Moderate</span></td><td>Long-term wealth building</td></tr>
+        <tr><td>Equities / Stocks</td><td>10-15% (market-linked)</td><td><span class="badge-good">High</span></td><td><span class="badge-low">High</span></td><td><span class="badge-mod">Moderate</span></td><td>Growth with higher risk tolerance</td></tr>
         <tr><td>Gold ETF / SGB</td><td>Tracks gold + 2.5% interest</td><td><span class="badge-good">High</span></td><td><span class="badge-low">Low</span></td><td><span class="badge-good">Strong</span></td><td>Digital gold exposure, no storage cost</td></tr>
       </tbody>
     </table>
@@ -1986,25 +2724,25 @@ footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     SECTION 14 — AREA-WISE
-═══════════════════════════════════════ -->
+<!-- =======================================
+     SECTION 14  -  AREA-WISE
+======================================= -->
 <section class="section areas-section" id="areas">
   <div class="section-header reveal center">
     <span class="section-label">Chennai Coverage</span>
-    <h2 class="section-h2">Gold Buyers Across Chennai — We Come to Every Major Area</h2>
-    <p class="section-sub" style="margin:0 auto">Whether you are searching for gold buyers near T Nagar, Velachery, or Tambaram — today's gold rate is the same across Chennai. We serve you at home or at our two branches.</p>
+    <h2 class="section-h2">Gold Buyers Across Chennai  -  We Come to Every Major Area</h2>
+    <p class="section-sub" style="margin:0 auto">Whether you are searching for gold buyers near T Nagar, Velachery, or Tambaram  -  today's gold rate is the same across Chennai. We serve you at home or at our two branches.</p>
   </div>
   <div class="areas-grid reveal" id="areas-grid"></div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     SECTION 15 — DAILY INSIGHTS
-═══════════════════════════════════════ -->
+<!-- =======================================
+     SECTION 15  -  DAILY INSIGHTS
+======================================= -->
 <section class="section insights-section" id="insights">
   <div class="section-header reveal">
     <span class="section-label">Market Intelligence</span>
-    <h2 class="section-h2">Gold Market News — What Actually Moves the Price</h2>
+    <h2 class="section-h2">Gold Market News  -  What Actually Moves the Price</h2>
     <p class="section-sub">Gold demand in India and global shifts both shape what you see on the rate board every morning. Here is what to watch.</p>
   </div>
   <div class="insights-grid reveal">
@@ -2013,21 +2751,21 @@ footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3
         <div><span class="insight-tag">USD / INR</span></div>
         <div>
           <h4>Rupee Weakness Keeps Gold Prices Elevated</h4>
-          <p>When the rupee weakens against the dollar, gold import costs rise — and domestic prices follow. The current exchange rate range has kept Chennai gold rates above their long-term average.</p>
+          <p>When the rupee weakens against the dollar, gold import costs rise  -  and domestic prices follow. The current exchange rate range has kept Chennai gold rates above their long-term average.</p>
         </div>
       </div>
       <div class="insight-card">
         <div><span class="insight-tag">RBI Policy</span></div>
         <div>
           <h4>India's Central Bank Keeps Adding to Its Gold Reserves</h4>
-          <p>The RBI has consistently added to its gold holdings over the past two years — a signal that gold remains central to national financial strategy. This institutional demand provides a strong floor beneath long-term prices.</p>
+          <p>The RBI has consistently added to its gold holdings over the past two years  -  a signal that gold remains central to national financial strategy. This institutional demand provides a strong floor beneath long-term prices.</p>
         </div>
       </div>
       <div class="insight-card">
         <div><span class="insight-tag">Demand</span></div>
         <div>
           <h4>Wedding Season and Festival Demand Push Prices Higher</h4>
-          <p>Tamil Nadu's wedding and festival calendar directly affects local gold demand. Peak periods — Akshaya Tritiya, Diwali, and the December wedding season — typically push Chennai rates noticeably higher.</p>
+          <p>Tamil Nadu's wedding and festival calendar directly affects local gold demand. Peak periods  -  Akshaya Tritiya, Diwali, and the December wedding season  -  typically push Chennai rates noticeably higher.</p>
         </div>
       </div>
     </div>
@@ -2035,38 +2773,38 @@ footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3
       <div class="factor-card">
         <h5>Key Price Factors Today</h5>
         <div class="factor-row"><span>US Dollar Strength</span><span class="factor-flat">Neutral</span></div>
-        <div class="factor-row"><span>Crude Oil</span><span class="factor-up">↑ Mild</span></div>
-        <div class="factor-row"><span>MCX Gold Futures</span><span class="factor-up">↑ Positive</span></div>
+        <div class="factor-row"><span>Crude Oil</span><span class="factor-up">Up Mild</span></div>
+        <div class="factor-row"><span>MCX Gold Futures</span><span class="factor-up">Up Positive</span></div>
         <div class="factor-row"><span>India Import Duty</span><span class="factor-flat">Unchanged</span></div>
-        <div class="factor-row"><span>Global Demand</span><span class="factor-up">↑ Rising</span></div>
+        <div class="factor-row"><span>Global Demand</span><span class="factor-up">Up Rising</span></div>
         <div class="factor-row"><span>INR/USD Rate</span><span class="factor-dn">Rupee Weak</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     SECTION 16 — SELL WITHOUT BILL
-═══════════════════════════════════════ -->
+<!-- =======================================
+     SECTION 16  -  SELL WITHOUT BILL
+======================================= -->
 <section class="section nobill-section" id="no-bill">
   <div class="nobill-grid">
     <div class="reveal">
       <span class="section-label">Rules &amp; Documents</span>
       <h2 class="section-h2">Can You Sell Gold Without a Bill in India?</h2>
-      <p class="section-sub">Yes — and this surprises many people. You can legally sell gold without the original purchase invoice. India's gold selling rules do not require you to produce a receipt from when the jewellery was first bought.</p>
+      <p class="section-sub">Yes  -  and this surprises many people. You can legally sell gold without the original purchase invoice. India's gold selling rules do not require you to produce a receipt from when the jewellery was first bought.</p>
       <p style="color:var(--text2);margin-top:1rem;font-size:0.9rem;line-height:1.7">What is required are basic identity documents to meet RBI's KYC requirements. Here is what to bring:</p>
       <ul class="doc-list">
-        <li><span>🪪</span> Any one government-issued photo ID (Aadhaar, PAN, Passport, or Voter ID)</li>
-        <li><span>📋</span> PAN card required for transactions above ₹2 lakh (Income Tax Act)</li>
-        <li><span>📸</span> A passport-size photograph may be needed for larger transactions</li>
-        <li><span>💎</span> The gold itself — no original bill required</li>
+        <li><span><i class="fa-solid fa-id-card" aria-hidden="true"></i></span> Any one government-issued photo ID (Aadhaar, PAN, Passport, or Voter ID)</li>
+        <li><span><i class="fa-solid fa-file-lines" aria-hidden="true"></i></span> PAN card required for transactions above INR 2 lakh (Income Tax Act)</li>
+        <li><span><i class="fa-solid fa-camera" aria-hidden="true"></i></span> A passport-size photograph may be needed for larger transactions</li>
+        <li><span><i class="fa-solid fa-gem" aria-hidden="true"></i></span> The gold itself  -  no original bill required</li>
       </ul>
     </div>
     <div class="reveal">
       <div class="legal-note">
-        <strong style="color:var(--gold)">⚖️ Legal Clarity Worth Knowing</strong><br><br>
+        <strong style="color:var(--gold)"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i> Legal Clarity Worth Knowing</strong><br><br>
         Selling inherited gold, received-as-gift gold, or gold bought without a bill is entirely legal in India. The Income Tax Act does not treat such sales as automatically taxable if the gold was held for more than three years (classified as a long-term capital asset). The tax treatment depends on your holding period and the source of the gold.<br><br>
-        For amounts above ₹2 lakh, PAN is mandatory under law. <em>We recommend consulting a CA for your specific situation. The above is general information, not legal or tax advice.</em>
+        For amounts above INR 2 lakh, PAN is mandatory under law. <em>We recommend consulting a CA for your specific situation. The above is general information, not legal or tax advice.</em>
       </div>
       <div style="margin-top:1.5rem;background:rgba(247,182,61,0.05);border-radius:12px;padding:1.5rem;border:1px solid var(--border);">
         <h4 style="margin-bottom:0.6rem;font-size:1.1rem;color:var(--text);">What Aghni Gold Does Not Buy</h4>
@@ -2076,37 +2814,37 @@ footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     SECTION 17 — LIVE PURITY TESTING
-═══════════════════════════════════════ -->
+<!-- =======================================
+     SECTION 17  -  LIVE PURITY TESTING
+======================================= -->
 <section class="section purity-test-section" id="testing">
   <div class="section-header reveal center">
     <span class="section-label">Testing Methods</span>
-    <h2 class="section-h2">How We Test Gold Purity — No Guesswork, No Damage</h2>
+    <h2 class="section-h2">How We Test Gold Purity  -  No Guesswork, No Damage</h2>
     <p class="section-sub" style="margin:0 auto">Three methods. Every step visible to you. The gold purity testing process at Aghni Gold leaves nothing to faith.</p>
   </div>
   <div class="purity-test-grid reveal">
     <div class="test-card">
-      <div class="test-icon">🔬</div>
+      <div class="test-icon"><i class="fa-solid fa-microscope" aria-hidden="true"></i></div>
       <h4>XRF Spectrometry (Primary Test)</h4>
-      <p>The gold purity testing machine we use — an X-Ray Fluorescence spectrometer — fires a controlled beam at your jewellery and reads the exact elemental composition. Result in under 60 seconds. Zero damage to your gold. Purity percentage displayed on screen as you watch.</p>
+      <p>The gold purity testing machine we use  -  an X-Ray Fluorescence spectrometer  -  fires a controlled beam at your jewellery and reads the exact elemental composition. Result in under 60 seconds. Zero damage to your gold. Purity percentage displayed on screen as you watch.</p>
     </div>
     <div class="test-card">
-      <div class="test-icon">🧪</div>
+      <div class="test-icon"><i class="fa-solid fa-vial" aria-hidden="true"></i></div>
       <h4>Acid Test (Secondary Verification)</h4>
-      <p>For older or unusual pieces, we apply a small drop of nitric acid to a scratch mark on a testing stone. The reaction pattern confirms karat range. This is a standard industry test — done openly at the counter, not behind closed doors.</p>
+      <p>For older or unusual pieces, we apply a small drop of nitric acid to a scratch mark on a testing stone. The reaction pattern confirms karat range. This is a standard industry test  -  done openly at the counter, not behind closed doors.</p>
     </div>
     <div class="test-card">
-      <div class="test-icon">⚖️</div>
+      <div class="test-icon"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i></div>
       <h4>Calibrated Digital Scale</h4>
       <p>Weight is measured on a certified digital scale accurate to 0.01 grams. You stand at the counter and watch the display. Stones are weighed separately and deducted from gross weight before any pricing calculation begins.</p>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     SECTION 18 — TESTIMONIALS
-═══════════════════════════════════════ -->
+<!-- =======================================
+     SECTION 18  -  TESTIMONIALS
+======================================= -->
 <section class="section testimonials-section" id="reviews">
   <div class="section-header reveal center">
     <span class="section-label">Customer Reviews</span>
@@ -2115,76 +2853,86 @@ footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3
   <div class="rating-bar reveal">
     <div class="big-rating">4.9</div>
     <div>
-      <div class="rating-stars">★★★★★</div>
+      <div class="rating-stars" aria-label="5 star rating"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i></div>
       <div style="color:var(--text);font-weight:600;margin-top:0.2rem;">435 Google Reviews</div>
       <div class="rating-count">Best gold buyers reviews in Chennai</div>
     </div>
   </div>
   <div class="reviews-grid">
-    <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"The transparency was what got me. The machine was turned toward me the whole time. I could read the purity figure myself. Walked out with cash in under 20 minutes."</p><div class="review-meta"><div class="review-avatar">S</div><div><div class="review-name">Sekaran R.</div><div class="review-date">Dec 2025 · T Nagar Branch</div></div></div></div>
-    <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"My grandmother's old silver and a few gold chains had been sitting in a box for years. These people gave a fair rate and the whole experience felt completely trustworthy."</p><div class="review-meta"><div class="review-avatar">D</div><div><div class="review-name">Dhanush K.</div><div class="review-date">Dec 2025 · Arumbakkam Branch</div></div></div></div>
-    <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"They came to my house, tested the gold there, walked me through the pricing, and transferred the money to my account. Could not have been a simpler experience."</p><div class="review-meta"><div class="review-avatar">H</div><div><div class="review-name">Hema V.</div><div class="review-date">Dec 2025 · Doorstep Service</div></div></div></div>
-    <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"My gold was pledged at a finance company and I assumed getting it out would be complicated. Aghni Gold paid off the loan and handed me the remaining cash the same day."</p><div class="review-meta"><div class="review-avatar">P</div><div><div class="review-name">Priya M.</div><div class="review-date">Nov 2025 · Pledged Gold Service</div></div></div></div>
-    <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"Best place in Chennai for selling gold compared to the other buyers I visited. The rate was higher, the process was quicker, and nobody pushed me toward anything."</p><div class="review-meta"><div class="review-avatar">R</div><div><div class="review-name">Ramesh A.</div><div class="review-date">Nov 2025 · T Nagar Branch</div></div></div></div>
-    <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"I took photos of the purity reading on my phone during the test. That kind of openness is what genuine trust looks like. Will recommend to everyone in my family."</p><div class="review-meta"><div class="review-avatar">A</div><div><div class="review-name">Aarti S.</div><div class="review-date">Oct 2025 · Arumbakkam Branch</div></div></div></div>
+    <div class="review-card"><div class="review-stars" aria-label="5 star review"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i></div><p class="review-text">"The transparency was what got me. The machine was turned toward me the whole time. I could read the purity figure myself. Walked out with cash in under 20 minutes."</p><div class="review-meta"><div class="review-avatar">S</div><div><div class="review-name">Sekaran R.</div><div class="review-date">Dec 2025  |  T Nagar Branch</div></div></div></div>
+    <div class="review-card"><div class="review-stars" aria-label="5 star review"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i></div><p class="review-text">"My grandmother's old silver and a few gold chains had been sitting in a box for years. These people gave a fair rate and the whole experience felt completely trustworthy."</p><div class="review-meta"><div class="review-avatar">D</div><div><div class="review-name">Dhanush K.</div><div class="review-date">Dec 2025  |  Arumbakkam Branch</div></div></div></div>
+    <div class="review-card"><div class="review-stars" aria-label="5 star review"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i></div><p class="review-text">"They came to my house, tested the gold there, walked me through the pricing, and transferred the money to my account. Could not have been a simpler experience."</p><div class="review-meta"><div class="review-avatar">H</div><div><div class="review-name">Hema V.</div><div class="review-date">Dec 2025  |  Doorstep Service</div></div></div></div>
+    <div class="review-card"><div class="review-stars" aria-label="5 star review"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i></div><p class="review-text">"My gold was pledged at a finance company and I assumed getting it out would be complicated. Aghni Gold paid off the loan and handed me the remaining cash the same day."</p><div class="review-meta"><div class="review-avatar">P</div><div><div class="review-name">Priya M.</div><div class="review-date">Nov 2025  |  Pledged Gold Service</div></div></div></div>
+    <div class="review-card"><div class="review-stars" aria-label="5 star review"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i></div><p class="review-text">"Best place in Chennai for selling gold compared to the other buyers I visited. The rate was higher, the process was quicker, and nobody pushed me toward anything."</p><div class="review-meta"><div class="review-avatar">R</div><div><div class="review-name">Ramesh A.</div><div class="review-date">Nov 2025  |  T Nagar Branch</div></div></div></div>
+    <div class="review-card"><div class="review-stars" aria-label="5 star review"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i></div><p class="review-text">"I took photos of the purity reading on my phone during the test. That kind of openness is what genuine trust looks like. Will recommend to everyone in my family."</p><div class="review-meta"><div class="review-avatar">A</div><div><div class="review-name">Aarti S.</div><div class="review-date">Oct 2025  |  Arumbakkam Branch</div></div></div></div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     SECTION 19 — FAQ
-═══════════════════════════════════════ -->
+<!-- =======================================
+     SECTION 19  -  FAQ
+======================================= -->
 <section class="section faq-section" id="faqs">
   <div class="section-header reveal center">
     <span class="section-label">Frequently Asked Questions</span>
-    <h2 class="section-h2">Questions About Selling Gold in Chennai — Answered Plainly</h2>
+    <h2 class="section-h2">Questions About Selling Gold in Chennai  -  Answered Plainly</h2>
   </div>
   <div class="faq-cols reveal">
     <div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How is gold price calculated at Aghni Gold? <span class="faq-arrow">▼</span></div><div class="faq-a">We use the formula: Net Gold Weight × Purity Factor × Today's 24K Market Rate. Net weight means total weight minus any stones. Purity factor is your karat divided by 24 (for 22K, that is 22/24 = 0.916). Every step is shown on paper before you agree to anything.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Will I get the full gold rate shown online? <span class="faq-arrow">▼</span></div><div class="faq-a">You get the rate for your gold's actual purity. The 24K rate applies to 99.9% pure gold. If your jewellery is 22K (91.6% purity), your payout is 91.6% of the 24K rate — which is the correct and fair calculation. There are no hidden deductions beyond what is shown upfront.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can I sell gold without the original bill or invoice? <span class="faq-arrow">▼</span></div><div class="faq-a">Yes. No original purchase bill is needed. You only need a government-issued photo ID (Aadhaar, PAN, Passport, or Voter ID). For transactions above ₹2 lakh, PAN card is mandatory under Income Tax rules.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Is ID proof required to sell gold? <span class="faq-arrow">▼</span></div><div class="faq-a">Yes. Any one valid government-issued ID is required — this is an RBI compliance requirement, not something specific to us. It protects both the seller and buyer and keeps the transaction fully legal.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Do you buy broken or damaged gold jewellery? <span class="faq-arrow">▼</span></div><div class="faq-a">Absolutely. Broken, bent, scratched, or outdated design — none of that affects the gold value. We buy the metal, not the craftsmanship. Chains with missing clasps, rings with missing stones, old bangles — all accepted without any extra deduction.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How is gold price calculated at Aghni Gold? <span class="faq-arrow">v</span></div><div class="faq-a">We use the formula: Net Gold Weight x Purity Factor x Today's 24K Market Rate. Net weight means total weight minus any stones. Purity factor is your karat divided by 24 (for 22K, that is 22/24 = 0.916). Every step is shown on paper before you agree to anything.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Will I get the full gold rate shown online? <span class="faq-arrow">v</span></div><div class="faq-a">You get the rate for your gold's actual purity. The 24K rate applies to 99.9% pure gold. If your jewellery is 22K (91.6% purity), your payout is 91.6% of the 24K rate  -  which is the correct and fair calculation. There are no hidden deductions beyond what is shown upfront.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can I sell gold without the original bill or invoice? <span class="faq-arrow">v</span></div><div class="faq-a">Yes. No original purchase bill is needed. You only need a government-issued photo ID (Aadhaar, PAN, Passport, or Voter ID). For transactions above INR 2 lakh, PAN card is mandatory under Income Tax rules.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Is ID proof required to sell gold? <span class="faq-arrow">v</span></div><div class="faq-a">Yes. Any one valid government-issued ID is required  -  this is an RBI compliance requirement, not something specific to us. It protects both the seller and buyer and keeps the transaction fully legal.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Do you buy broken or damaged gold jewellery? <span class="faq-arrow">v</span></div><div class="faq-a">Absolutely. Broken, bent, scratched, or outdated design  -  none of that affects the gold value. We buy the metal, not the craftsmanship. Chains with missing clasps, rings with missing stones, old bangles  -  all accepted without any extra deduction.</div></div>
     </div>
     <div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How fast will I actually get paid? <span class="faq-arrow">▼</span></div><div class="faq-a">From the moment the purity test finishes to money in your hand — 15 minutes or less. Payment by cash (for smaller amounts), bank transfer, or UPI. For larger transactions, bank transfer is processed the same day.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is 916 hallmark gold? <span class="faq-arrow">▼</span></div><div class="faq-a">916 means the gold contains 91.6% pure gold — this is 22 karat. The remaining 8.4% is usually copper or silver added for durability. Most Indian jewellery is 916 hallmarked and it is the most commonly traded karat in Chennai.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can you take over my pledged gold from a bank or NBFC? <span class="faq-arrow">▼</span></div><div class="faq-a">Yes. We contact the lender directly, close the outstanding loan balance, collect the gold, test it, and pay you the value above the loan amount — usually on the same day you call us.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Do you offer doorstep gold buying all over Chennai? <span class="faq-arrow">▼</span></div><div class="faq-a">We cover most parts of Chennai — T Nagar, Velachery, Adyar, Anna Nagar, Tambaram, Ambattur, Porur, Chromepet, Nungambakkam, and more. Call 8000 100 933 to confirm availability at your location and book a home visit.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Will gold prices increase — should I sell now or wait? <span class="faq-arrow">▼</span></div><div class="faq-a">No one predicts gold prices reliably. What we can say is that selling when you need the money — rather than waiting to time the market perfectly — is almost always the right call. If the gold is sitting unused, today's strong rates make this a solid window to act.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How fast will I actually get paid? <span class="faq-arrow">v</span></div><div class="faq-a">From the moment the purity test finishes to money in your hand  -  15 minutes or less. Payment by cash (for smaller amounts), bank transfer, or UPI. For larger transactions, bank transfer is processed the same day.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is 916 hallmark gold? <span class="faq-arrow">v</span></div><div class="faq-a">916 means the gold contains 91.6% pure gold  -  this is 22 karat. The remaining 8.4% is usually copper or silver added for durability. Most Indian jewellery is 916 hallmarked and it is the most commonly traded karat in Chennai.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can you take over my pledged gold from a bank or NBFC? <span class="faq-arrow">v</span></div><div class="faq-a">Yes. We contact the lender directly, close the outstanding loan balance, collect the gold, test it, and pay you the value above the loan amount  -  usually on the same day you call us.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Do you offer doorstep gold buying all over Chennai? <span class="faq-arrow">v</span></div><div class="faq-a">We cover most parts of Chennai  -  T Nagar, Velachery, Adyar, Anna Nagar, Tambaram, Ambattur, Porur, Chromepet, Nungambakkam, and more. Call 8000 100 933 to confirm availability at your location and book a home visit.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Will gold prices increase  -  should I sell now or wait? <span class="faq-arrow">v</span></div><div class="faq-a">No one predicts gold prices reliably. What we can say is that selling when you need the money  -  rather than waiting to time the market perfectly  -  is almost always the right call. If the gold is sitting unused, today's strong rates make this a solid window to act.</div></div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     SECTION 20 — FINAL CTA
-═══════════════════════════════════════ -->
+<!-- =======================================
+     SECTION 20  -  FINAL CTA
+======================================= -->
 <section class="cta-section" id="branches">
-  <h2>Sell Gold Now in Chennai —<br><em>Walk Out With Cash Today</em></h2>
+  <h2>Sell Gold Now in Chennai  - <br><em>Walk Out With Cash Today</em></h2>
   <p>Two branches. Doorstep service across Chennai. Instant cash for gold, any karat, any condition. The rate you see is the rate you get.</p>
   <div class="cta-btns">
-    <a href="#calculator" class="btn-primary">Check Your Gold Value Free →</a>
-    <a href="tel:+918000100933" class="phone-btn">📞 8000 100 933</a>
-    <a href="tel:+918878871422" class="phone-btn">📞 887 887 1422</a>
+    <a href="#calculator" class="btn-primary">Check Your Gold Value Free -></a>
+    <a href="tel:+918000100933" class="phone-btn"><i class="fa-solid fa-phone" aria-hidden="true"></i> 8000 100 933</a>
+    <a href="tel:+918878871422" class="phone-btn"><i class="fa-solid fa-phone" aria-hidden="true"></i> 887 887 1422</a>
   </div>
   <div class="branch-pills">
-    <div class="branch-pill">📍 <strong>T Nagar Branch:</strong> 1st Floor, 52/83, Bazullah Rd, T. Nagar, Chennai 600017</div>
-    <div class="branch-pill">📍 <strong>Arumbakkam Branch:</strong> 26, 1st Floor, Vinayagapuram 1st Street, MMDA Colony, Chennai 600106</div>
+    <div class="branch-pill"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> <strong>T Nagar Branch:</strong> 1st Floor, 52/83, Bazullah Rd, T. Nagar, Chennai 600017</div>
+    <div class="branch-pill"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> <strong>Arumbakkam Branch:</strong> 26, 1st Floor, Vinayagapuram 1st Street, MMDA Colony, Chennai 600106</div>
   </div>
-  <p style="margin-top:1.5rem;font-size:0.8rem;color:var(--text2);position:relative">Open Monday – Saturday · 9:30 AM to 7:00 PM · Doorstep Service 7 AM – 9 PM · support@aghnigold.com</p>
+  <p style="margin-top:1.5rem;font-size:0.8rem;color:var(--text2);position:relative">Open Monday - Saturday  |  9:30 AM to 7:00 PM  |  Doorstep Service 7 AM - 9 PM  |  support@aghnigold.com</p>
 </section>
 
-<div class="live-rate-popup" id="liveRatePopup">
-  <div class="live-dot"></div>
-  <div class="live-text">
-    <strong>Live Gold Rate</strong>
-    <span id="liveRateValue">₹8,629/g</span>
+<div class="sale-popup" id="liveRatePopup">
+  <button class="sale-close" onclick="closeSalePopup()" aria-label="Close sale popup">
+    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+  </button>
+  <div class="sale-icon">
+    <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+  </div>
+  <div class="sale-content">
+    <p><strong id="saleName">Gomathi</strong> from <span id="saleArea">K.K. Nagar</span> just sold gold earrings and saved <span id="saleSaved">INR 4,800</span> compared to others.</p>
+    <small>Verified customer - Latest 22K rate: <span id="liveRateValue">INR 8,629/g</span></small>
   </div>
 </div>
 
+<a href="tel:+918000100933" class="chat-float-btn" aria-label="Quick support call">
+  <i class="fa-regular fa-comment-dots" aria-hidden="true"></i>
+  <span class="chat-live-dot"></span>
+</a>
+
 <footer>
   <div>
-    <div class="foot-brand">Aghni Gold</div>
+    <div class="foot-brand"> <img src="./img/logo new.png" alt=""> </div>
     <p class="foot-tagline">Chennai's most transparent gold buyers. RBI compliant, BIS certified, ISO registered. Over 435 families served.</p>
   </div>
   <div>
@@ -2216,7 +2964,7 @@ footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3
     </ul>
   </div>
   <div class="foot-bottom">
-    <div class="foot-copy">© 2026 Aghni Gold. All rights reserved. | Registered Gold Buyer | RBI Compliant</div>
+    <div class="foot-copy">(c) 2026 Aghni Gold. All rights reserved. | Registered Gold Buyer | RBI Compliant</div>
     <div class="foot-certs">
       <span class="cert-badge">RBI Approved</span>
       <span class="cert-badge">BIS Certified</span>
@@ -2226,9 +2974,9 @@ footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3
 </footer>
 
 <script>
-/* ═══════════════════════════════════════
+/* =======================================
    RATES & DATA
-═══════════════════════════════════════ */
+======================================= */
 const BASE_24K = 9420; // fallback only
 const TROY_OZ_GRAMS = 31.1035;
 
@@ -2240,11 +2988,31 @@ const KARATS = {
   14: { factor: 0.585, label: '14 Karat (585)', hallmark: '585' },
 };
 
-function fmt(n) { return '₹' + Math.round(n).toLocaleString('en-IN'); }
+function fmt(n) { return 'INR ' + Math.round(n).toLocaleString('en-IN'); }
 
-/* ═══════════════════════════════════════
-   LIVE API FETCH — fawazahmed0 (free, no CORS)
-═══════════════════════════════════════ */
+let latest22Rate = 8629;
+const topFlashTextEl = document.getElementById('topFlashText');
+let topFlashIndex = 0;
+const topFlashMessages = [
+  () => `We Pay ${fmt(latest22Rate)}/gram Today - Highest Price in Chennai`,
+  () => 'Doorstep gold buying across Chennai - Fast and transparent',
+  () => 'Get instant payout after XRF purity test - No hidden deduction',
+  () => 'Guaranteed better value on old, broken and pledged gold items'
+];
+
+function rotateTopFlash() {
+  if (!topFlashTextEl) return;
+  topFlashTextEl.classList.add('fade');
+  setTimeout(() => {
+    topFlashIndex = (topFlashIndex + 1) % topFlashMessages.length;
+    topFlashTextEl.textContent = topFlashMessages[topFlashIndex]();
+    topFlashTextEl.classList.remove('fade');
+  }, 220);
+}
+
+/* =======================================
+   LIVE API FETCH  -  fawazahmed0 (free, no CORS)
+======================================= */
 async function fetchGoldUSDperGram() {
   const today     = new Date().toISOString().slice(0, 10);
   const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
@@ -2274,7 +3042,7 @@ async function fetchUSDtoINR() {
     }
   } catch(e) {}
 
-  // Source B — same fawazahmed0
+  // Source B  -  same fawazahmed0
   try {
     const today = new Date().toISOString().slice(0, 10);
     const res = await fetch(
@@ -2290,9 +3058,9 @@ async function fetchUSDtoINR() {
   return 84.5; // final fallback
 }
 
-/* ═══════════════════════════════════════
-   LIVE RATES — replaces old updateLiveRates
-═══════════════════════════════════════ */
+/* =======================================
+   LIVE RATES  -  replaces old updateLiveRates
+======================================= */
 async function updateLiveRates() {
   // Fetch both in parallel
   const [goldUSD, usdINR] = await Promise.all([
@@ -2300,11 +3068,12 @@ async function updateLiveRates() {
     fetchUSDtoINR()
   ]);
 
-  // If API works → use live rate, else fallback
+  // If API works -> use live rate, else fallback
   const r24 = goldUSD ? Math.round(goldUSD * usdINR) : BASE_24K;
   const r22  = Math.round(r24 * 0.916);
   const r18  = Math.round(r24 * 0.75);
   const isLive = !!goldUSD;
+  latest22Rate = r22;
 
   const now     = new Date();
   const timeStr = now.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit' });
@@ -2318,7 +3087,7 @@ async function updateLiveRates() {
   if (h18) h18.innerHTML = fmt(r18) + '<small>/g</small>';
 
   const upd = document.getElementById('hero-update-time');
-  if (upd) upd.textContent = (isLive ? '🟢 Live · ' : '🟡 Estimated · ') + 'Updated ' + timeStr;
+  if (upd) upd.textContent = (isLive ? 'Live - ' : 'Estimated - ') + 'Updated ' + timeStr;
 
   // Rate table
   const changes = { 24:+80, 22:+73, 20:+67, 18:+60, 14:+47 };
@@ -2329,7 +3098,7 @@ async function updateLiveRates() {
       const ch    = changes[k];
       const sign  = ch >= 0 ? '+' : '';
       const cls   = ch >= 0 ? 'change-up' : 'change-dn';
-      const arrow = ch >= 0 ? '▲' : '▼';
+      const arrow = ch >= 0 ? '+' : '-';
       return `<tr>
         <td>${KARATS[k].label}</td>
         <td>${KARATS[k].hallmark}</td>
@@ -2358,6 +3127,17 @@ async function updateLiveRates() {
   const liveVal = document.getElementById('liveRateValue');
   if (liveVal) liveVal.textContent = `${fmt(r22)}/g`;
 
+  // Nav live rate pill
+  const navLiveRate = document.getElementById('navLiveRate');
+  if (navLiveRate) navLiveRate.textContent = fmt(r22).replace('/g', '');
+
+  // Hero dynamic social proof
+  const heroQuoteCount = document.getElementById('heroQuoteCount');
+  if (heroQuoteCount) {
+    const quoteCount = 38 + Math.floor(Math.random() * 28);
+    heroQuoteCount.textContent = `${quoteCount} people got quotes yesterday`;
+  }
+
   // Sync calculator
   calcRates['24'] = r24;
   calcRates['22'] = r22;
@@ -2374,9 +3154,9 @@ async function updateLiveRates() {
   if (fResult) fResult.textContent = fmt(Math.round(10.99 * r24));
 }
 
-/* ═══════════════════════════════════════
+/* =======================================
    CALCULATOR
-═══════════════════════════════════════ */
+======================================= */
 const calcRates = {
   '24': BASE_24K,
   '22': Math.round(BASE_24K * 0.916),
@@ -2418,9 +3198,9 @@ const calcPurityEl = document.getElementById('calc-purity');
 if (calcWeightEl) calcWeightEl.addEventListener('input', calcGold);
 if (calcPurityEl) calcPurityEl.addEventListener('change', calcGold);
 
-/* ═══════════════════════════════════════
+/* =======================================
    LEAD FORM ESTIMATE
-═══════════════════════════════════════ */
+======================================= */
 function leadFormEstimate() {
   const weight = parseFloat(document.getElementById('lf-weight').value);
   const karat  = parseInt(document.getElementById('lf-karat').value);
@@ -2429,13 +3209,13 @@ function leadFormEstimate() {
   const bonus = weight * 300;
   document.getElementById('lf-est-val').textContent = fmt(val + bonus);
   document.getElementById('lf-est-note').textContent =
-    `For ${weight}g of ${KARATS[karat].label} at today's Chennai rate + ₹300/g Aghni Gold bonus. Confirmed after free purity test.`;
+    `For ${weight}g of ${KARATS[karat].label} at today's Chennai rate + INR 300/g Aghni Gold bonus. Confirmed after free purity test.`;
   document.getElementById('lf-result-box').className = 'lf-result-box show';
 }
 
-/* ═══════════════════════════════════════
+/* =======================================
    HISTORY
-═══════════════════════════════════════ */
+======================================= */
 function buildHistory() {
   const grid  = document.getElementById('history-grid');
   const chart = document.getElementById('mini-chart');
@@ -2458,7 +3238,7 @@ function buildHistory() {
     const label = i === 9 ? 'Today' : h.date.toLocaleDateString('en-IN', { day: '2-digit', month: 'short' });
     const cls   = h.change >= 0 ? 'up' : 'dn';
     const sign  = h.change >= 0 ? '+' : '';
-    const arrow = h.change >= 0 ? '▲' : '▼';
+    const arrow = h.change >= 0 ? '+' : '-';
     return `<div class="history-card">
       <div class="history-date">${label}</div>
       <div class="history-price">${fmt(h.price)}</div>
@@ -2478,9 +3258,9 @@ function buildHistory() {
   }
 }
 
-/* ═══════════════════════════════════════
+/* =======================================
    AREAS
-═══════════════════════════════════════ */
+======================================= */
 function buildAreas(r22Override) {
   const areas = ['T Nagar','Velachery','Adyar','Anna Nagar','Tambaram','Porur','Chromepet','Nungambakkam','Ambattur','Mylapore','Vadapalani','Kodambakkam'];
   const grid  = document.getElementById('areas-grid');
@@ -2490,14 +3270,14 @@ function buildAreas(r22Override) {
     `<div class="area-card">
       <div class="area-name">Gold Buyers in ${a}</div>
       <div class="area-rate">${fmt(r22)}/g</div>
-      <div class="area-sub">22K · Doorstep Available</div>
+      <div class="area-sub">22K | Doorstep Available</div>
     </div>`
   ).join('');
 }
 
-/* ═══════════════════════════════════════
+/* =======================================
    FAQ TOGGLE
-═══════════════════════════════════════ */
+======================================= */
 function toggleFaq(el) {
   const item    = el.parentElement;
   const wasOpen = item.classList.contains('open');
@@ -2505,9 +3285,9 @@ function toggleFaq(el) {
   if (!wasOpen) item.classList.add('open');
 }
 
-/* ═══════════════════════════════════════
+/* =======================================
    INTERSECTION OBSERVERS
-═══════════════════════════════════════ */
+======================================= */
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (e.isIntersecting) { e.target.classList.add('visible'); revealObserver.unobserve(e.target); }
@@ -2549,50 +3329,113 @@ document.querySelectorAll('.prediction-card').forEach((el, i) => {
   el.dataset.delay = i * 200; predObserver.observe(el);
 });
 
-/* ═══════════════════════════════════════
+/* =======================================
    CALL POPUP
-═══════════════════════════════════════ */
-const popup = document.getElementById('callPopup');
-function showPopup() {
-  popup.classList.add('show');
-  setTimeout(() => {
-    popup.classList.remove('show');
-    setTimeout(showPopup, 3000);
-  }, 4000);
+======================================= */
+const supportPopup = document.getElementById('callPopup');
+const supportName = document.getElementById('supportName');
+const supportText = document.getElementById('supportText');
+const supportFeed = [
+  { name: 'Ramesh', text: 'Need help with gold rates or payout value? I can guide you now.' },
+  { name: 'Kaviya', text: 'Doorstep visit available. Share your area and we will arrange pickup.' },
+  { name: 'Arun', text: 'Check your old gold value in 60 seconds. Fast and transparent process.' }
+];
+let supportFeedIndex = 0;
+let supportTimer = null;
+
+function renderSupportPopup() {
+  if (!supportName || !supportText) return;
+  const item = supportFeed[supportFeedIndex];
+  supportName.textContent = item.name;
+  supportText.textContent = item.text;
 }
+
+function cycleSupportPopup() {
+  if (!supportPopup) return;
+  renderSupportPopup();
+  supportPopup.classList.add('show');
+  clearTimeout(supportTimer);
+  supportTimer = setTimeout(() => {
+    supportPopup.classList.remove('show');
+    supportFeedIndex = (supportFeedIndex + 1) % supportFeed.length;
+    supportTimer = setTimeout(cycleSupportPopup, 2200);
+  }, 6200);
+}
+
 function closePopup() {
-  popup.classList.remove('show');
-  setTimeout(showPopup, 3000);
+  if (!supportPopup) return;
+  supportPopup.classList.remove('show');
+  clearTimeout(supportTimer);
+  supportTimer = setTimeout(cycleSupportPopup, 10000);
 }
-window.addEventListener('load', () => setTimeout(showPopup, 1500));
 
-/* ═══════════════════════════════════════
-   LIVE RATE POPUP
-═══════════════════════════════════════ */
-const livePopup = document.getElementById('liveRatePopup');
-function showLivePopup() {
-  livePopup.classList.add('show');
-  setTimeout(() => {
-    livePopup.classList.remove('show');
-    setTimeout(showLivePopup, 3000);
-  }, 4000);
+const salePopup = document.getElementById('liveRatePopup');
+const saleName = document.getElementById('saleName');
+const saleArea = document.getElementById('saleArea');
+const saleSaved = document.getElementById('saleSaved');
+const saleFeed = [
+  { name: 'Gomathi', area: 'K.K. Nagar', saved: 'INR 4,800' },
+  { name: 'Saritha', area: 'Nanganallur', saved: 'INR 9,300' },
+  { name: 'Prabhu', area: 'T Nagar', saved: 'INR 6,700' },
+  { name: 'Divya', area: 'Ambattur', saved: 'INR 5,900' }
+];
+let saleFeedIndex = 0;
+let saleTimer = null;
+
+function renderSalePopup() {
+  if (!saleName || !saleArea || !saleSaved) return;
+  const item = saleFeed[saleFeedIndex];
+  saleName.textContent = item.name;
+  saleArea.textContent = item.area;
+  saleSaved.textContent = item.saved;
 }
-window.addEventListener('load', () => setTimeout(showLivePopup, 2000));
 
-/* ═══════════════════════════════════════
+function cycleSalePopup() {
+  if (!salePopup) return;
+  renderSalePopup();
+  salePopup.classList.add('show');
+  clearTimeout(saleTimer);
+  saleTimer = setTimeout(() => {
+    salePopup.classList.remove('show');
+    saleFeedIndex = (saleFeedIndex + 1) % saleFeed.length;
+    saleTimer = setTimeout(cycleSalePopup, 1800);
+  }, 5600);
+}
+
+function closeSalePopup() {
+  if (!salePopup) return;
+  salePopup.classList.remove('show');
+  clearTimeout(saleTimer);
+  saleTimer = setTimeout(cycleSalePopup, 9000);
+}
+
+/* =======================================
    MOBILE MENU
-═══════════════════════════════════════ */
+======================================= */
 function toggleMenu() {
   document.getElementById('navMenu').classList.toggle('open');
 }
+document.querySelectorAll('#navMenu a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.getElementById('navMenu').classList.remove('open');
+  });
+});
 
-/* ═══════════════════════════════════════
-   INIT — fetch live rate first, then build UI
-═══════════════════════════════════════ */
+/* =======================================
+   INIT  -  fetch live rate first, then build UI
+======================================= */
 (async () => {
-  await updateLiveRates(); // fetch live rate → update everything
-  buildHistory();          // build history using live 22K rate
+  await updateLiveRates();
+  buildHistory();
   calcGold();
+
+  if (topFlashTextEl) {
+    topFlashTextEl.textContent = topFlashMessages[topFlashIndex]();
+    setInterval(rotateTopFlash, 4200);
+  }
+
+  setTimeout(cycleSupportPopup, 1700);
+  setTimeout(cycleSalePopup, 900);
 })();
 
 // Auto-refresh every 5 minutes
@@ -2600,3 +3443,8 @@ setInterval(updateLiveRates, 5 * 60 * 1000);
 </script>
 </body>
 </html>
+
+
+
+
+
