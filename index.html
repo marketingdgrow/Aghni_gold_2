@@ -3455,6 +3455,72 @@ document.querySelectorAll('#navMenu a').forEach(link => {
 
 // Auto-refresh every 5 minutes
 setInterval(updateLiveRates, 5 * 60 * 1000);
+
+
+
+
+(function(){
+  var els = [
+    document.querySelector('.rate-table-wrap'),
+    document.querySelector('.purity-table-wrap')
+  ];
+
+  var investReveal = document.querySelector('.invest-section .reveal');
+  if(investReveal) els.push(investReveal);
+
+  els.forEach(function(el){
+    if(!el) return;
+    el.style.cssText += 'overflow-x:auto!important;display:block!important;width:100%!important;max-width:100%!important;';
+    var tbl = el.querySelector('table');
+    if(tbl){
+      tbl.style.cssText += 'width:max-content!important;min-width:100%;white-space:nowrap;';
+    }
+  });
+
+  if(investReveal){
+    investReveal.style.cssText += 'transform:none!important;opacity:1!important;';
+  }
+})();
+
+
+(function(){
+  if(window.innerWidth > 768) return;
+
+  var tables = [
+    { wrap: document.querySelector('.rate-table-wrap') },
+    { wrap: document.querySelector('.purity-table-wrap') },
+    { wrap: document.querySelector('.invest-section .reveal') }
+  ];
+
+  tables.forEach(function(t){
+    if(!t.wrap) return;
+
+    // dot container create
+    var dots = document.createElement('div');
+    dots.className = 'tbl-dots';
+    dots.innerHTML = '<span></span><span></span><span></span><span></span><span></span>';
+    t.wrap.parentNode.insertBefore(dots, t.wrap.nextSibling);
+
+    // scroll handler
+    t.wrap.addEventListener('scroll', function(){
+      var scrollLeft = this.scrollLeft;
+      var maxScroll = this.scrollWidth - this.clientWidth;
+      if(maxScroll <= 0) return;
+
+      var pct = scrollLeft / maxScroll; // 0 to 1
+      var total = dots.children.length; // 5
+      var active = Math.round(pct * (total - 1)); // 0 to 4
+
+      Array.from(dots.children).forEach(function(d, i){
+        d.classList.toggle('active', i === active);
+      });
+    });
+
+    // first dot active by default
+    if(dots.children[0]) dots.children[0].classList.add('active');
+  });
+})();
+
 </script>
 </body>
 </html>
