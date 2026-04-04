@@ -2199,11 +2199,27 @@ footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3
 <body>
 
 
-<div class="top-flash-bar">
-  <i class="fa-solid fa-trophy" aria-hidden="true"></i>
-  <span id="topFlashText">Sell Gold at Chennai's Highest Price - Instant Payment</span>
-  <i class="fa-solid fa-angle-right" aria-hidden="true"></i>
+  <!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-track" id="ticker">
+    <span>24K Gold: ₹ 9,420/g</span>
+    <span>22K Gold: ₹ 8,629/g</span>
+    <span>18K Gold: ₹ 7,065/g</span>
+    <!-- <span>Aghni Gold Offer: Extra ₹ 300/gram</span> -->
+    <span><i class="fa-solid fa-star" aria-hidden="true"></i> 4.9 Rating. 435+ Reviews</span>
+    <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Doorstep Service Across Chennai</span>
+    <span><i class="fa-solid fa-microscope" aria-hidden="true"></i> BIS Certified XRF Testing</span>
+    <span>24K Gold: ₹ 9,420/g</span>
+    <span>22K Gold: ₹ 8,629/g</span>
+    <span>18K Gold: ₹ 7,065/g</span>
+    <!-- <span>Aghni Gold Offer: Extra ₹ 300/gram</span> -->
+    <span><i class="fa-solid fa-star" aria-hidden="true"></i> 4.9 Rating.  435+ Reviews</span>
+    <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Doorstep Service Across Chennai</span>
+    <span><i class="fa-solid fa-microscope" aria-hidden="true"></i> BIS Certified XRF Testing</span>
+  </div>
 </div>
+
+
 
 <!-- NAVBAR - REFERENCE STYLE -->
 
@@ -2219,7 +2235,7 @@ footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3
     <div class="nav-rate-pill">
       <span class="dot"></span>
       <span>Rate</span>
-      <strong id="navLiveRate">INR 13,818</strong>
+      <strong id="navLiveRate">₹ 13,818</strong>
       <small>/g</small>
     </div>
   </div>
@@ -2246,24 +2262,10 @@ footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3
   </div>
 </nav>
 
-<!-- TICKER -->
-<div class="ticker-wrap">
-  <div class="ticker-track" id="ticker">
-    <span>24K Gold: INR 9,420/g</span>
-    <span>22K Gold: INR 8,629/g</span>
-    <span>18K Gold: INR 7,065/g</span>
-    <!-- <span>Aghni Gold Offer: Extra INR 300/gram</span> -->
-    <span><i class="fa-solid fa-star" aria-hidden="true"></i> 4.9 Rating. 435+ Reviews</span>
-    <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Doorstep Service Across Chennai</span>
-    <span><i class="fa-solid fa-microscope" aria-hidden="true"></i> BIS Certified XRF Testing</span>
-    <span>24K Gold: INR 9,420/g</span>
-    <span>22K Gold: INR 8,629/g</span>
-    <span>18K Gold: INR 7,065/g</span>
-    <!-- <span>Aghni Gold Offer: Extra INR 300/gram</span> -->
-    <span><i class="fa-solid fa-star" aria-hidden="true"></i> 4.9 Rating.  435+ Reviews</span>
-    <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Doorstep Service Across Chennai</span>
-    <span><i class="fa-solid fa-microscope" aria-hidden="true"></i> BIS Certified XRF Testing</span>
-  </div>
+<div class="top-flash-bar">
+  <i class="fa-solid fa-trophy" aria-hidden="true"></i>
+  <span id="topFlashText">Sell Gold at Chennai's Highest Price - Instant Payment</span>
+  <i class="fa-solid fa-angle-right" aria-hidden="true"></i>
 </div>
 
 <div class="support-popup" id="callPopup">
@@ -2308,37 +2310,50 @@ footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3
     </div>
     <div class="hero-offer hero-offer-pill">
       <strong><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> WE PAY THE HIGHEST IN CHENNAI</strong>
-      <p>INR 15K Guarantee if you find a better rate.</p>
+      <p>₹ 15K Guarantee if you find a better rate.</p>
     </div>
-    <!-- <p class="hero-sub">Walk in or call us. We buy old, pledged, or unused gold at the highest Chennai market rate — with full transparency, zero hidden charges, and instant payment.
-</p> -->
+    
     <div class="hero-btns">
       <a href="#calculator" class="btn-primary">Check Your Gold Value</a>
       <a href="tel:+918000100933" class="btn-secondary"><i class="fa-solid fa-phone" aria-hidden="true"></i> 8000 100 933</a>
     </div>
   </div>
-  <div class="hero-right">
-    <div class="hero-rate-card">
-      <div class="rate-card-title"><span class="live-dot"></span> Today Gold Rate in Chennai</div>
-      <div class="rate-rows">
-        <div class="rate-row">
-          <div class="rate-label">24 Karat (999)<small>Per Gram</small></div>
-          <div class="rate-value" id="hero-24k">--<small>/g</small></div>
-        </div>
-        <div class="rate-row">
-          <div class="rate-label">22 Karat (916)<small>Per Gram</small></div>
-          <div class="rate-value" id="hero-22k">--<small>/g</small></div>
-        </div>
-        <div class="rate-row">
-          <div class="rate-label">18 Karat (750)<small>Per Gram</small></div>
-          <div class="rate-value" id="hero-18k">--<small>/g</small></div>
-        </div>
+
+
+ <div class="hero-right">
+  <!-- Image -->
+  
+
+  <!-- Rate Card -->
+  <div class="hero-rate-card">
+    <div class="rate-card-title"><span class="live-dot"></span> Today Gold Rate in Chennai</div>
+    <div class="rate-rows">
+      <div class="rate-row">
+        <div class="rate-label">24 Karat (999)<small>Per Gram</small></div>
+        <div class="rate-value" id="hero-24k">--<small>/g</small></div>
       </div>
-      <div class="rate-update" id="hero-update-time">Fetching live rate...</div>
-      <button class="rate-cta-btn" onclick="document.getElementById('calculator').scrollIntoView({behavior:'smooth'})">Calculate My Gold Value</button>
-      <div class="rate-disclaimer">Rates shown are for reference. Final price confirmed after purity test.</div>
+      <div class="rate-row">
+        <div class="rate-label">22 Karat (916)<small>Per Gram</small></div>
+        <div class="rate-value" id="hero-22k">--<small>/g</small></div>
+      </div>
+      <div class="rate-row">
+        <div class="rate-label">18 Karat (750)<small>Per Gram</small></div>
+        <div class="rate-value" id="hero-18k">--<small>/g</small></div>
+      </div>
     </div>
+
+
+    <div class="rate-update" id="hero-update-time">Fetching live rate...</div>
+    <button class="rate-cta-btn" onclick="document.getElementById('calculator').scrollIntoView({behavior:'smooth'})">Calculate My Gold Value</button>
+    <div class="rate-disclaimer">Rates shown are for reference. Final price confirmed after purity test.</div>
   </div>
+
+  <div class="hero-right-image">
+    <img src="./img/customer.png" alt="Gold buyer with jewellery" loading="eager" decoding="async">
+  </div>
+</div>
+
+
 </section>
 
 
@@ -2402,11 +2417,11 @@ footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3
     </div>
     <div class="calc-result">
       <div class="result-label">Your Gold Value</div>
-      <div class="result-amount" id="calc-result-display">INR 0</div>
+      <div class="result-amount" id="calc-result-display">₹ 0</div>
       <div class="result-breakdown">
         <div><span>Weight</span><span id="rb-weight">10g</span></div>
         <div><span>Purity</span><span id="rb-purity">22K</span></div>
-        <div><span>Rate</span><span id="rb-rate">INR 8,629/g</span></div>
+        <div><span>Rate</span><span id="rb-rate">₹ 8,629/g</span></div>
       </div>
       <a href="tel:+918000100933" class="btn-primary" style="width:100%;justify-content:center;">Get Exact Quote -></a>
       <div class="disclaimer">* Estimate only. Exact price after XRF purity testing.</div>
@@ -2436,20 +2451,20 @@ footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3
   </div>
   <div class="prediction-grid">
     <div class="prediction-card">
-      <div class="pred-period">Short Term (1-2 Weeks)</div>
-      <span class="pred-signal signal-up">Mildly Positive</span>
+      <div class="pred-period">Mildly Positive</div>
+      
       <p class="pred-text">Global uncertainty and a slightly weaker rupee are both keeping gold demand firm. If these factors hold, short-term prices could edge up 0.5-1.5% from today's Chennai gold rate.</p>
       <p class="pred-disclaimer">This is market analysis, not financial advice.</p>
     </div>
     <div class="prediction-card">
-      <div class="pred-period">Medium Term (1-3 Months)</div>
-      <span class="pred-signal signal-neutral">Watch Carefully</span>
+      <div class="pred-period">Watch Carefully</div>
+      
       <p class="pred-text">The US Federal Reserve's rate direction and India's import duty situation are the two biggest unknowns. Gold price trends in Chennai could swing either way  -  making right now a fair window to sell if liquidity matters to you.</p>
       <p class="pred-disclaimer">This is market analysis, not financial advice.</p>
     </div>
     <div class="prediction-card">
-      <div class="pred-period">Long Term (6-12 Months)</div>
-      <span class="pred-signal signal-up">Broadly Positive</span>
+      <div class="pred-period">Broadly Positive</div>
+      
       <p class="pred-text">Historically, gold in India has appreciated over long periods. That said, selling today at a strong rate and putting the cash to work often makes more financial sense than holding an idle asset indefinitely.</p>
       <p class="pred-disclaimer">This is market analysis, not financial advice.</p>
     </div>
@@ -2602,8 +2617,8 @@ footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3
         <div class="formula-line"><span class="op">3.</span> Net Gold Weight = 12.0 grams</div>
         <div class="formula-line"><span class="op">4.</span> Karat = 22K -> Purity Factor = 0.916</div>
         <div class="formula-line"><span class="op">5.</span> Pure Gold Equivalent = 12.0 x 0.916 = 10.99g</div>
-        <div class="formula-line"><span class="op">6.</span> Today's 24K Rate = INR 9,420/g</div>
-        <div class="formula-result">Final Payout approx 10.99g x INR 9,420 = <span style="color:var(--gold)">INR 1,03,526</span></div>
+        <div class="formula-line"><span class="op">6.</span> Today's 24K Rate = ₹ 9,420/g</div>
+        <div class="formula-result">Final Payout approx 10.99g x ₹ 9,420 = <span style="color:var(--gold)">₹ 1,03,526</span></div>
       </div>
     </div>
     <div class="breakdown-text reveal">
@@ -2689,7 +2704,7 @@ footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3
     <p class="section-sub" style="margin:0 auto">Sidestep these common errors and you will almost always get the best gold price available.</p>
   </div>
   <div class="mistakes-grid reveal">
-    <div class="mistake-card"><div class="mistake-num">01</div><h4>Selling Without Checking Today's Rate</h4><p>Gold prices shift hourly. Always check the live gold rate in Chennai before stepping out. A INR 200/gram difference on 10 grams is INR 2,000 gained or lost on the spot.</p></div>
+    <div class="mistake-card"><div class="mistake-num">01</div><h4>Selling Without Checking Today's Rate</h4><p>Gold prices shift hourly. Always check the live gold rate in Chennai before stepping out. A ₹ 200/gram difference on 10 grams is ₹ 2,000 gained or lost on the spot.</p></div>
     <div class="mistake-card"><div class="mistake-num">02</div><h4>Not Watching the Purity Test Yourself</h4><p>If a buyer tests your gold "in the back room," leave. Any buyer worth trusting runs the test right in front of you  -  purity percentage visible on screen as it reads.</p></div>
     <div class="mistake-card"><div class="mistake-num">03</div><h4>Accepting Unexplained Deductions</h4><p>Ask: what deductions are being made and why? Making charge recovery, wastage fees, and unexplained "labour" cuts of 5-10% are common at unregulated buyers.</p></div>
     <div class="mistake-card"><div class="mistake-num">04</div><h4>Selling to an Unregistered Buyer</h4><p>Only sell to buyers who are RBI compliant and government registered. Unregistered buyers carry legal risk for you  -  and almost always offer the lowest prices.</p></div>
@@ -2739,7 +2754,7 @@ footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3
 <!-- =======================================
      SECTION 15  -  DAILY INSIGHTS
 ======================================= -->
-<section class="section insights-section" id="insights">
+<!-- <section class="section insights-section" id="insights">
   <div class="section-header reveal">
     <span class="section-label">Market Intelligence</span>
     <h2 class="section-h2">Gold Market News  -  What Actually Moves the Price</h2>
@@ -2748,7 +2763,7 @@ footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3
   <div class="insights-grid reveal">
     <div class="insight-main">
       <div class="insight-card">
-        <div><span class="insight-tag">USD / INR</span></div>
+        <div><span class="insight-tag">USD / ₹</span></div>
         <div>
           <h4>Rupee Weakness Keeps Gold Prices Elevated</h4>
           <p>When the rupee weakens against the dollar, gold import costs rise  -  and domestic prices follow. The current exchange rate range has kept Chennai gold rates above their long-term average.</p>
@@ -2777,11 +2792,11 @@ footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3
         <div class="factor-row"><span>MCX Gold Futures</span><span class="factor-up">Up Positive</span></div>
         <div class="factor-row"><span>India Import Duty</span><span class="factor-flat">Unchanged</span></div>
         <div class="factor-row"><span>Global Demand</span><span class="factor-up">Up Rising</span></div>
-        <div class="factor-row"><span>INR/USD Rate</span><span class="factor-dn">Rupee Weak</span></div>
+        <div class="factor-row"><span>₹/USD Rate</span><span class="factor-dn">Rupee Weak</span></div>
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <!-- =======================================
      SECTION 16  -  SELL WITHOUT BILL
@@ -2795,7 +2810,7 @@ footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3
       <p style="color:var(--text2);margin-top:1rem;font-size:0.9rem;line-height:1.7">What is required are basic identity documents to meet RBI's KYC requirements. Here is what to bring:</p>
       <ul class="doc-list">
         <li><span><i class="fa-solid fa-id-card" aria-hidden="true"></i></span> Any one government-issued photo ID (Aadhaar, PAN, Passport, or Voter ID)</li>
-        <li><span><i class="fa-solid fa-file-lines" aria-hidden="true"></i></span> PAN card required for transactions above INR 2 lakh (Income Tax Act)</li>
+        <li><span><i class="fa-solid fa-file-lines" aria-hidden="true"></i></span> PAN card required for transactions above ₹ 2 lakh (Income Tax Act)</li>
         <li><span><i class="fa-solid fa-camera" aria-hidden="true"></i></span> A passport-size photograph may be needed for larger transactions</li>
         <li><span><i class="fa-solid fa-gem" aria-hidden="true"></i></span> The gold itself  -  no original bill required</li>
       </ul>
@@ -2804,7 +2819,7 @@ footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3
       <div class="legal-note">
         <strong style="color:var(--gold)"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i> Legal Clarity Worth Knowing</strong><br><br>
         Selling inherited gold, received-as-gift gold, or gold bought without a bill is entirely legal in India. The Income Tax Act does not treat such sales as automatically taxable if the gold was held for more than three years (classified as a long-term capital asset). The tax treatment depends on your holding period and the source of the gold.<br><br>
-        For amounts above INR 2 lakh, PAN is mandatory under law. <em>We recommend consulting a CA for your specific situation. The above is general information, not legal or tax advice.</em>
+        For amounts above ₹ 2 lakh, PAN is mandatory under law. <em>We recommend consulting a CA for your specific situation. The above is general information, not legal or tax advice.</em>
       </div>
       <div style="margin-top:1.5rem;background:rgba(247,182,61,0.05);border-radius:12px;padding:1.5rem;border:1px solid var(--border);">
         <h4 style="margin-bottom:0.6rem;font-size:1.1rem;color:var(--text);">What Aghni Gold Does Not Buy</h4>
@@ -2880,7 +2895,7 @@ footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3
     <div>
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How is gold price calculated at Aghni Gold? <span class="faq-arrow">v</span></div><div class="faq-a">We use the formula: Net Gold Weight x Purity Factor x Today's 24K Market Rate. Net weight means total weight minus any stones. Purity factor is your karat divided by 24 (for 22K, that is 22/24 = 0.916). Every step is shown on paper before you agree to anything.</div></div>
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Will I get the full gold rate shown online? <span class="faq-arrow">v</span></div><div class="faq-a">You get the rate for your gold's actual purity. The 24K rate applies to 99.9% pure gold. If your jewellery is 22K (91.6% purity), your payout is 91.6% of the 24K rate  -  which is the correct and fair calculation. There are no hidden deductions beyond what is shown upfront.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can I sell gold without the original bill or invoice? <span class="faq-arrow">v</span></div><div class="faq-a">Yes. No original purchase bill is needed. You only need a government-issued photo ID (Aadhaar, PAN, Passport, or Voter ID). For transactions above INR 2 lakh, PAN card is mandatory under Income Tax rules.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can I sell gold without the original bill or invoice? <span class="faq-arrow">v</span></div><div class="faq-a">Yes. No original purchase bill is needed. You only need a government-issued photo ID (Aadhaar, PAN, Passport, or Voter ID). For transactions above ₹ 2 lakh, PAN card is mandatory under Income Tax rules.</div></div>
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Is ID proof required to sell gold? <span class="faq-arrow">v</span></div><div class="faq-a">Yes. Any one valid government-issued ID is required  -  this is an RBI compliance requirement, not something specific to us. It protects both the seller and buyer and keeps the transaction fully legal.</div></div>
       <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Do you buy broken or damaged gold jewellery? <span class="faq-arrow">v</span></div><div class="faq-a">Absolutely. Broken, bent, scratched, or outdated design  -  none of that affects the gold value. We buy the metal, not the craftsmanship. Chains with missing clasps, rings with missing stones, old bangles  -  all accepted without any extra deduction.</div></div>
     </div>
@@ -2920,8 +2935,8 @@ footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3
     <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
   </div>
   <div class="sale-content">
-    <p><strong id="saleName">Gomathi</strong> from <span id="saleArea">K.K. Nagar</span> just sold gold earrings and saved <span id="saleSaved">INR 4,800</span> compared to others.</p>
-    <small>Verified customer - Latest 22K rate: <span id="liveRateValue">INR 8,629/g</span></small>
+    <p><strong id="saleName">Gomathi</strong> from <span id="saleArea">K.K. Nagar</span> just sold gold earrings and saved <span id="saleSaved">₹ 4,800</span> compared to others.</p>
+    <small>Verified customer - Latest 22K rate: <span id="liveRateValue">₹ 8,629/g</span></small>
   </div>
 </div>
 
@@ -2988,7 +3003,7 @@ const KARATS = {
   14: { factor: 0.585, label: '14 Karat (585)', hallmark: '585' },
 };
 
-function fmt(n) { return 'INR ' + Math.round(n).toLocaleString('en-IN'); }
+function fmt(n) { return '₹ ' + Math.round(n).toLocaleString('en-IN'); }
 
 let latest22Rate = 8629;
 const topFlashTextEl = document.getElementById('topFlashText');
@@ -3374,10 +3389,10 @@ const saleName = document.getElementById('saleName');
 const saleArea = document.getElementById('saleArea');
 const saleSaved = document.getElementById('saleSaved');
 const saleFeed = [
-  { name: 'Gomathi', area: 'K.K. Nagar', saved: 'INR 4,800' },
-  { name: 'Saritha', area: 'Nanganallur', saved: 'INR 9,300' },
-  { name: 'Prabhu', area: 'T Nagar', saved: 'INR 6,700' },
-  { name: 'Divya', area: 'Ambattur', saved: 'INR 5,900' }
+  { name: 'Gomathi', area: 'K.K. Nagar', saved: '₹ 4,800' },
+  { name: 'Saritha', area: 'Nanganallur', saved: '₹ 9,300' },
+  { name: 'Prabhu', area: 'T Nagar', saved: '₹ 6,700' },
+  { name: 'Divya', area: 'Ambattur', saved: '₹ 5,900' }
 ];
 let saleFeedIndex = 0;
 let saleTimer = null;

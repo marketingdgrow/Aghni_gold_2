@@ -346,7 +346,7 @@ nav {
 .rate-table td:nth-child(3) { font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
 .rate-table td.change-up { color: var(--green); font-weight: 600; }
 .rate-table td.change-dn { color: var(--red); font-weight: 600; }
-.rate-note { font-size: 0.78rem; color: var(--text2); margin-top: 1rem; opacity: 0.7; }
+.rate-note { font-size: 1rem; color: var(--text1); margin-top: 1.9rem; opacity: 0.9; }
 .rate-note i { margin-right: 6px; color: var(--gold); }
 
 /* ═══════════════════════════════════════
@@ -413,7 +413,7 @@ nav {
   transition: all 0.3s ease;
 }
 .result-breakdown {
-  font-size: 13px;
+  font-size: 16px;
   color: var(--text2);
   margin-bottom: 24px;
   padding: 12px 16px;
@@ -423,7 +423,7 @@ nav {
 }
 .result-breakdown div { display: flex; justify-content: space-between; padding: 4px 0; }
 .result-breakdown div span:last-child { color: var(--text); font-weight: 600; }
-.disclaimer { font-size: 11px; color: var(--text2); opacity: 0.6; margin-top: 16px; }
+.disclaimer { font-size: 15px; color: var(--gold-light); opacity: 0.8; margin-top: 16px; }
 
 /* ═══════════════════════════════════════
    HISTORY
@@ -499,7 +499,7 @@ nav {
 .steps-grid::before { content: ''; position: absolute; top: 28px; left: 12.5%; right: 12.5%; height: 2px; background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-dark)); z-index: 0; }
 .step { text-align: center; padding: 0 1rem; position: relative; z-index: 1; }
 .step-num { width: 56px; height: 56px; border-radius: 50%; background: var(--bg3); border: 3px solid var(--gold); color: var(--gold); font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.2rem; transition: background 0.3s; }
-.step:hover .step-num { background: rgba(247,182,61,0.15); }
+
 .step h4 { font-size: 1rem; margin-bottom: 0.5rem; color: var(--text); }
 .step p { color: var(--text2); font-size: 0.85rem; line-height: 1.6; }
 
@@ -541,10 +541,15 @@ nav {
 .purity-section { background: var(--bg2); }
 .purity-table-wrap { overflow-x: auto; }
 .purity-table { width: 100%; border-collapse: collapse; }
-.purity-table thead th { background: rgba(247,182,61,0.1); color: var(--gold); padding: 0.9rem 1.2rem; text-align: left; font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; }
+.purity-table thead th { background: rgba(247,182,61,0.1); color: var(--gold); padding: 0.9rem 1.2rem; 
+  text-align: center;
+   font-size: 0.8rem; 
+  letter-spacing: 0.06em;
+   text-transform: uppercase;
+ }
 .purity-table tbody tr { border-bottom: 1px solid var(--border); }
 .purity-table tbody tr:hover { background: rgba(247,182,61,0.05); }
-.purity-table td { padding: 0.9rem 1.2rem; color: var(--text2); font-size: 0.9rem; }
+.purity-table td { padding: 0.9rem 1.2rem; color: var(--text2); font-size: 0.9rem;  text-align: center; }
 .purity-table td:nth-child(4) { color: var(--gold); font-weight: 600; }
 .hallmark-badge { display: inline-block; background: rgba(247,182,61,0.2); border: 1px solid var(--border); color: var(--gold); padding: 0.15rem 0.55rem; border-radius: 4px; font-size: 0.8rem; font-weight: 600; }
 
@@ -2230,5 +2235,196 @@ footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3
     bottom: 14px;
     width: 54px;
     height: 54px;
+  }
+}
+
+
+
+
+/* ---- */
+
+/* hero-right: image + card side by side */
+#hero .hero-right {
+  display: grid;
+  grid-template-columns: 0.7fr 1fr;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem 6vw 2rem 5rem;
+}
+
+#hero .hero-right-image {
+  width: 100%;
+}
+
+#hero .hero-right-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+#hero .hero-right .hero-rate-card {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Tablet (max 1024px) — stack ஆகும் */
+@media (max-width: 1024px) {
+  #hero .hero-right {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 5vw 2rem;
+    gap: 1.2rem;
+  }
+}
+
+/* Mobile (max 768px) — image மேல, card கீழ */
+@media (max-width: 768px) {
+  #hero .hero-right {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0 5vw 2rem;
+  }
+
+  #hero .hero-right-image {
+    width: min(260px, 65vw);
+    margin: 0 auto;
+  }
+}
+
+/* Small mobile (max 480px) */
+@media (max-width: 480px) {
+  #hero .hero-right {
+    padding: 0 4vw 1.5rem;
+  }
+
+  #hero .hero-right-image {
+    width: min(200px, 60vw);
+  }
+}
+
+
+/* IMAGE BOX WITH BLUR BACKGROUND */
+#hero .hero-right-image {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(247, 182, 61, 0.06);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(247, 182, 61, 0.25);
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 350px;
+}
+
+/* BLUR GLOW BEHIND IMAGE */
+#hero .hero-right-image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 50% 60%,
+    rgba(247, 182, 61, 0.18) 0%,
+    rgba(58, 3, 3, 0.4) 70%
+  );
+  z-index: 0;
+  border-radius: 20px;
+}
+
+#hero .hero-right-image img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  max-height: 460px;
+  filter: drop-shadow(0 12px 32px rgba(247, 182, 61, 0.2));
+}
+
+/* RATE CARD FIT */
+#hero .hero-right .hero-rate-card {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.6rem;
+  box-sizing: border-box;
+}
+
+#hero .hero-right .rate-rows {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-bottom: 1rem;
+}
+
+#hero .hero-right .rate-cta-btn {
+  margin-top: auto;
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+  #hero .hero-right-image {
+    min-height: 220px;
+  }
+
+  #hero .hero-right-image img {
+    max-height: 240px;
+  }
+
+  #hero .hero-right .hero-rate-card {
+    padding: 1.3rem;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  #hero .hero-right-image {
+    width: min(260px, 65vw);
+    min-height: 200px;
+    margin: 0 auto;
+  }
+
+  #hero .hero-right-image img {
+    max-height: 200px;
+  }
+
+  #hero .hero-right .hero-rate-card {
+    padding: 1.2rem;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+  #hero .hero-right-image {
+    width: 100%;
+    min-height: 170px;
+  }
+
+  #hero .hero-right-image img {
+    max-height: 170px;
+  }
+
+  #hero .hero-right .hero-rate-card {
+    padding: 1rem;
+  }
+
+  #hero .hero-right .rate-value {
+    font-size: 0.95rem;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .support-popup,
+  .sale-popup {
+    display: none !important;
   }
 }
